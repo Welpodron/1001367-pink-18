@@ -5,8 +5,79 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="pager-header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип фотоприложения «Пинк»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть/Закрыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item nav-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Фотоприложение «Пинк» – раскрасьте серые будни</h1>
+      <section class="intro">
+        <header class="intro__header">
+          <b class="intro__slogan">Взгляните на жизнь иначе!</b>
+          <img class="intro__image" src="https://via.placeholder.com/498x314" width="498" height="314" alt="Пример работы фотоприложения «Пинк» на мобильном телефоне">
+        </header>
+        <div class="download">
+          <h2 class="visually-hidden">Скачать приложение</h2>
+          <a class="download__button" href="https://www.apple.com/iphone/appstore/">Скачать приложение</a>
+          <div class="marketplaces">
+            <ul class="marketplaces__list">
+              <li class="marketplaces__item">
+                <a class="marketplaces__link marketplaces__link--app-store" href="https://www.apple.com/iphone/appstore/">Фотоприложение «Пинк» в App Store</a>
+              </li>
+              <li class="marketplaces__item">
+                <a class="marketplaces__link marketplaces__link--google-play" href="https://www.microsoft.com/store/">Фотоприложение «Пинк» в Google Play</a>
+              </li>
+              <li class="marketplaces__item">
+                <a class="marketplaces__link marketplaces__link--microsoft-store" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone/">Фотоприложение «Пинк» в Microsoft Store</a>
+              </li>
+            </ul>
+            <p class="marketplaces__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </div>
+      </section>
+      <section class="information">
+        <header class="information__header">
+          <h2 class="visually-hidden">О приложении</h2>
+          <b class="information__slogan">Устали от серости мегаполиса? Нам есть, что вам предложить!</b>
+        </header>
+        <ul class="information__list">
+          <li class="information__item">
+            <h3 class="information__title">Поднимает настроение</h3>
+            <p class="information__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <img class="information__item-image information__item-image--original" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Оригинальное изображение">
+          </li>
+          <li class="information__item">
+            <h3 class="information__title">Меняет мир вокруг</h3>
+            <p class="information__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <img class="information__item-image information__item-image--color-overlay" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Изображение с эффектом наложения розового цвета">
+          </li>
+          <li class="information__item">
+            <h3 class="information__title">Заводит новых друзей</h3>
+            <p class="information__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <img class="information__item-image information__item-image--full-overlay" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Изображение с эффектом наложения розового цвета, а также наложенный сверху текст и картинка">
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
