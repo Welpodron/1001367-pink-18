@@ -2,12 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк Фотографии</title>
+    <title>HTML Academy: Пинк публикации пользователей</title>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="pager-header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип фотоприложения «Пинк»">
+        <img class="page-header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип фотоприложения «Пинк»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть/Закрыть меню</button>
@@ -33,7 +33,7 @@
       <section class="users-publications">
         <h1 class="users-publications__title">Фотографии пользователей</h1>
         <p class="users-publications__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <ol class="users-publications__list">
+        <ul class="users-publications__list">
           <li class="users-publications__item users-publications__item--hot">
             <blockquote>
               <a class="users-publications__picture" href="#">
@@ -43,6 +43,7 @@
               <span class="users-publications__time">(5 минут назад)</span>
               <p class="users-publications__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <span class="users-publications__likes">Нравится: 215</span>
+              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
             </blockquote>
           </li>
           <li class="users-publications__item">
@@ -54,6 +55,7 @@
               <span class="users-publications__time">(5 часов назад)</span>
               <p class="users-publications__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
               <span class="users-publications__likes">Нравится: 356</span>
+              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
             </blockquote>
           </li>
           <li class="users-publications__item">
@@ -65,6 +67,7 @@
               <span class="users-publications__time">(12 часов назад)</span>
               <p class="users-publications__text">Соседи будут рады!</p>
               <span class="users-publications__likes">Нравится: 666</span>
+              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
             </blockquote>
           </li>
           <li class="users-publications__item">
@@ -76,6 +79,7 @@
               <span class="users-publications__time">(20 часов назад)</span>
               <p class="users-publications__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
               <span class="users-publications__likes">Нравится: 215</span>
+              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
             </blockquote>
           </li>
           <li class="users-publications__item">
@@ -87,6 +91,7 @@
               <span class="users-publications__time">(25 часов назад)</span>
               <p class="users-publications__text">Самая кубанская в мире!</p>
               <span class="users-publications__likes">Нравится: 4</span>
+              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
             </blockquote>
           </li>
           <li class="users-publications__item">
@@ -98,6 +103,7 @@
               <span class="users-publications__time">(40 часов назад)</span>
               <p class="users-publications__text">Где снег-то?</p>
               <span class="users-publications__likes">Нравится: 150</span>
+              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
             </blockquote>
           </li>
           <li class="users-publications__item">
@@ -109,17 +115,17 @@
               <span class="users-publications__time">(45 часов назад)</span>
               <p class="users-publications__text">Всем GM и взаимные лайки!</p>
               <span class="users-publications__likes">Нравится: 2560</span>
+              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
             </blockquote>
           </li>
-        </ol>
+        </ul>
       </section>
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo" href="index.html">
-        <img class="pager-footer__logo-image" src="https://via.placeholder.com/147x40" width="147" height="40" alt="Логотип фотоприложения «Пинк»">
+        <img class="page-footer__logo-image" src="https://via.placeholder.com/147x40" width="147" height="40" alt="Логотип фотоприложения «Пинк»">
       </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
+        <ul class="social">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в twitter</a>
           </li>
@@ -130,7 +136,6 @@
             <a class="social__link social__link--youtube" href="https://www.youtube.com/">Наш канал на Youtube</a>
           </li>
         </ul>
-      </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
