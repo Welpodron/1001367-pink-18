@@ -32,7 +32,7 @@
     <main class="page-main">
       <section class="users-publications">
         <h1 class="users-publications__title">Фотографии пользователей</h1>
-        <p class="users-publications__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <b class="users-publications__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</b>
         <ul class="users-publications__list">
           <li class="users-publications__item users-publications__item--hot">
             <blockquote>
@@ -119,6 +119,21 @@
             </blockquote>
           </li>
         </ul>
+      </section>
+      <section class="upload">
+        <h2 class="visually-hidden">Создать и запостить публикацию</h2>
+        <b class="upload__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</b>
+        <img class="upload__image" src="https://via.placeholder.com/300x400" width="300" height="400" alt="Фото для публикации">
+        <form class="upload__form" action="https://echo.htmlacademy.ru" method="GET">
+          <label class="visually-hidden" for="filter__crop">Обрезать изображение</label>
+          <input class="upload__slider upload__slider--active" type="range" min="1" max="100" value="70" id="filter__crop">
+          <label class="visually-hidden" for="filter__fill">Заливка изображения</label>
+          <input class="upload__slider" type="range" min="1" max="100" value="20" id="filter__fill">
+          <label class="visually-hidden" for="filter__fill">Контраст изображения</label>
+          <input class="upload__slider" type="range" min="1" max="100" value="50" id="filter__contrast">
+          <button class="upload__button-submit" type="submit">Запостить</button>
+          <button class="upload__button-reset" type="reset">Отмена</button>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
