@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Даниил Салип](https://up.htmlacademy.ru/adaptive/18/user/1001367).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Пудов](https://up.htmlacademy.ru/adaptive/18/user/216332).
 
 ---
 
