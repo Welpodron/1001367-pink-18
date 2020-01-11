@@ -92,6 +92,16 @@
               <span class="reviews__author-about">25 лет, водитель трамвая</span>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <span class="reviews__author-about">25 лет, водитель трамвая</span>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <span class="reviews__author-about">25 лет, водитель трамвая</span>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
             <button class="reviews__prev" type="button">Предыдущий отзыв</button>
             <button class="reviews__next" type="button">Следующий отзыв</button>
           </div>
@@ -105,46 +115,72 @@
       <section class="plans">
         <h2 class="visually-hidden">Тарифы</h2>
         <div class="plans__wrapper slider">
-          <ul class="plans__features-list">
-            <li class="plans__features-item">Розовый фильтр</li>
-            <li class="plans__features-item">Смайлики</li>
-            <li class="plans__features-item">Комментарии</li>
-          </ul>
-          <ul class="plans__list slider__list">
-            <li class="plans__item slider__item">
-              <div class="plans__item-header">
-                <h3 class="plans__item-title">База</h3>
-                <span class="plans__item-price">1,99 USD</span>
-              </div>
-              <ul class="plans__item-features">
-                <li class="plans__item-feature plans__item-feature--enabled">Розовый фильтр</li>
-                <li class="plans__item-feature plans__item-feature--disabled">Смайлики</li>
-                <li class="plans__item-feature plans__item-feature--disabled">Комментарии</li>
-              </ul>
-            </li>
-            <li class="plans__item plans__item--hot plans__item--active slider__item">
-              <div class="plans__item-header">
-                <h3 class="plans__item-title">Стандарт</h3>
-                <span class="plans__item-price">3,99 USD</span>
-              </div>
-              <ul class="plans__item-features">
-                <li class="plans__item-feature plans__item-feature--enabled">Розовый фильтр</li>
-                <li class="plans__item-feature plans__item-feature--enabled">Смайлики</li>
-                <li class="plans__item-feature plans__item-feature--disabled">Комментарии</li>
-              </ul>
-            </li>
-            <li class="plans__item slider__item">
-              <div class="plans__item-header">
-                <h3 class="plans__item-title">Анлим</h3>
-                <span class="plans__item-price">9,99 USD</span>
-              </div>
-              <ul class="plans__item-features">
-                <li class="plans__item-feature plans__item-feature--enabled">Розовый фильтр</li>
-                <li class="plans__item-feature plans__item-feature--enabled">Смайлики</li>
-                <li class="plans__item-feature plans__item-feature--enabled">Комментарии</li>
-              </ul>
-            </li>
-          </ul>
+          <table class="plans__table">
+            <thead class="plans__header">
+              <tr class="plans__list">
+                <th class="plans__legend"></th>
+                <th>
+                  <b class="plans__name">База</b>
+                  <span class="plans__price">1,99 USD</span>
+                </th>
+                <th>
+                  <b class="plans__name">Стандарт</b>
+                  <span class="plans__price">3,99 USD</span>
+                </th>
+                <th>
+                  <b class="plans__name">Анлим</b>
+                  <span class="plans__price">9,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="plans__comparison-list">
+              <tr class="plans__comparison-item">
+                <td class="plans__comparison-feature">Розовый фильтр</td>
+                <td>
+                  <span class="plans__feature-name">Розовый фильтр</span>
+                  <span class="plans__availability plans__availability--available">Входит в тариф</span>
+                </td>
+                <td>
+                  <span class="plans__feature-name">Розовый фильтр</span>
+                  <span class="plans__availability plans__availability--available">Входит в тариф</span>
+                </td>
+                <td>
+                  <span class="plans__feature-name">Розовый фильтр</span>
+                  <span class="plans__availability plans__availability--available">Входит в тариф</span>
+                </td>
+              </tr>
+              <tr class="plans__comparison-item">
+                <td class="plans__comparison-feature">Смайлики</td>
+                <td>
+                  <span class="plans__feature-name">Смайлики</span>
+                  <span class="plans__availability plans__availability--not-available">Не входит в тариф</span>
+                </td>
+                <td>
+                  <span class="plans__feature-name">Смайлики</span>
+                  <span class="plans__availability plans__availability--available">Входит в тариф</span>
+                </td>
+                <td>
+                  <span class="plans__feature-name">Смайлики</span>
+                  <span class="plans__availability plans__availability--available">Входит в тариф</span>
+                </td>
+              </tr>
+              <tr class="plans__comparison-item">
+                <td class="plans__comparison-feature">Комментарии</td>
+                <td>
+                  <span class="plans__feature-name">Комментарии</span>
+                  <span class="plans__availability plans__availability--not-available">Не входит в тариф</span>
+                </td>
+                <td>
+                  <span class="plans__feature-name">Комментарии</span>
+                  <span class="plans__availability plans__availability--not-available">Не входит в тариф</span>
+                </td>
+                <td>
+                  <span class="plans__feature-name">Комментарии</span>
+                  <span class="plans__availability plans__availability--available">Входит в тариф</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <div class="plans__toggles slider__toggles">
             <button class="slider__toggle" type="button">1 слайд</button>
             <button class="slider__toggle slider__toggle--active" type="button">2 слайд</button>
