@@ -1,0 +1,61 @@
+.information__header{
+  text-align: center;
+}
+
+.information__slogan{
+  @include Title-light($ebony-clay);
+}
+
+.information__list{
+  @include List-reset;
+  background-color: $concrete;
+}
+
+
+
+.information__item{
+  text-align: center;
+}
+
+.information__title{
+  font-size: 18px;
+}
+
+.information__description{
+  color: $ebony-clay;
+}
+
+.information__item-image {
+  display: none;
+}
+
+.information__item:last-of-type .information__item-image{
+  display: inline;
+}
+
+@media (min-width: $tablet-width){
+  .information__slogan {
+    font-size: 40px;
+  }
+  .information__item{
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .information__slogan{
+    font-size: 50px;
+  }
+  .information__item{
+    text-align: center;
+  }
+  .information__title{
+    font-size: 30px;
+  }
+  .information__description{
+    font-size: 18px;
+  }
+  .information__item-image {
+    display: inline;
+  }
+}

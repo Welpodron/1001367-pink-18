@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк публикации пользователей</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -31,8 +33,10 @@
     </header>
     <main class="page-main">
       <section class="users-publications">
-        <h1 class="users-publications__title">Фотографии пользователей</h1>
-        <b class="users-publications__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</b>
+        <header class="users-publications__header">
+          <h1 class="users-publications__title">Фотографии<br>пользователей</h1>
+          <b class="users-publications__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</b>
+        </header>
         <ul class="users-publications__list">
           <li class="users-publications__item users-publications__item--hot">
             <blockquote>

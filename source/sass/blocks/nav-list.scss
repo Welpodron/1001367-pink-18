@@ -1,0 +1,22 @@
+.nav-list__item {
+  text-align: center;
+  background-color: $ebony-clay;
+  box-shadow: 0px 1px 0 0 #000000, inset 0px 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+.nav-list__item a {
+  display: block;
+  padding: 20px 0px;
+  font-size: 18px;
+  @include Sans-bold;
+  color: $white;
+  text-transform: uppercase;
+}
+/*
+@media (min-width: $desktop-width){
+  .nav-list__item a{
+    padding: 0px;
+    @include Sans-regular;
+    text-transform: none;
+  }
+}
+*/

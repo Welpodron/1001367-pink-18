@@ -1,0 +1,8 @@
+.marketplaces__list{
+  @include List-reset;
+}
+
+.marketplaces__availability{
+  font-size: 18px;
+  @include Sans-light;
+}

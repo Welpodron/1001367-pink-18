@@ -1,0 +1,31 @@
+.contacts{
+  text-align: center;
+}
+
+.contacts a{
+  @include Sans-light;
+  font-size: 24px;
+  color: $cerise-red;
+}
+
+.contacts span{
+  @include Sans-bold;
+  font-size: 18px;
+  color: $ebony-clay;
+}
+
+.contacts__slogan{
+  @include Title-light($ebony-clay);
+}
+
+@media (min-width: $tablet-width){
+  .contacts__slogan {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .contacts__slogan{
+    font-size: 50px;
+  }
+}
