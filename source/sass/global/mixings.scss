@@ -1,24 +1,6 @@
-/*FONTS AND TEXT SECTION*/
-@mixin Sans-light {
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-}
+@mixin List-reset {
+  margin: 0;
+  padding: 0;
 
-@mixin Sans-regular {
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@mixin Sans-bold {
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@mixin Title-light($TextColor) {
-  @include Sans-light;
-  font-size: 24px;
-  color: $TextColor;
+  list-style: none;
 }

@@ -1,27 +1,29 @@
-.information__header{
+.information__header {
   text-align: center;
 }
 
-.information__slogan{
-  @include Title-light($ebony-clay);
+.information__slogan {
+  font-weight: 300;
+  line-height: normal;
 }
 
-.information__list{
-  @include List-reset;
+.information__list {
   background-color: $concrete;
+
+  @include List-reset;
 }
 
-
-
-.information__item{
+.information__item {
   text-align: center;
 }
 
-.information__title{
+.information__title {
   font-size: 18px;
+  line-height: 24px;
 }
 
-.information__description{
+.information__description {
+  line-height: 24px;
   color: $ebony-clay;
 }
 
@@ -29,32 +31,39 @@
   display: none;
 }
 
-.information__item:last-of-type .information__item-image{
+.information__item:last-of-type .information__item-image {
   display: inline;
 }
 
-@media (min-width: $tablet-width){
+@media (min-width: $tablet-width) {
   .information__slogan {
     font-size: 40px;
   }
-  .information__item{
+
+  .information__item {
     text-align: left;
   }
 }
 
-@media (min-width: $desktop-width){
-  .information__slogan{
+@media (min-width: $desktop-width) {
+  .information__slogan {
     font-size: 50px;
   }
-  .information__item{
+
+  .information__item {
     text-align: center;
   }
-  .information__title{
+
+  .information__title {
     font-size: 30px;
+    line-height: 30px;
   }
-  .information__description{
+
+  .information__description {
     font-size: 18px;
+    line-height: 30px;
   }
+
   .information__item-image {
     display: inline;
   }

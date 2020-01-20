@@ -1,3 +1,12 @@
-.copyright__text{
-  @include Sans-regular;
+.copyright__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $ebony-clay;
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__text {
+    font-size: 18px;
+  }
 }

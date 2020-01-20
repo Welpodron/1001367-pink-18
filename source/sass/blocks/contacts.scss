@@ -1,31 +1,37 @@
-.contacts{
+.contacts {
   text-align: center;
 }
 
-.contacts a{
-  @include Sans-light;
+.contacts__slogan {
+  font-weight: 300;
+  line-height: normal;
+}
+
+.contacts a {
+  font-weight: 300;
   font-size: 24px;
+  line-height: normal;
   color: $cerise-red;
 }
 
-.contacts span{
-  @include Sans-bold;
+.contacts span {
+  font-weight: 700;
   font-size: 18px;
   color: $ebony-clay;
 }
 
-.contacts__slogan{
-  @include Title-light($ebony-clay);
+.contacts__address {
+  font-style: normal;
 }
 
-@media (min-width: $tablet-width){
+@media (min-width: $tablet-width) {
   .contacts__slogan {
     font-size: 40px;
   }
 }
 
-@media (min-width: $desktop-width){
-  .contacts__slogan{
+@media (min-width: $desktop-width) {
+  .contacts__slogan {
     font-size: 50px;
   }
 }

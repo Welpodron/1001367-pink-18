@@ -1,30 +1,33 @@
 .intro {
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-color: #112030;
-  background-position: center center;
-  background-repeat: no-repeat;
-
   text-align: center;
   color: $white;
+
+  background-color: #112030;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .intro__slogan {
-  @include Title-light($white);
+  font-weight: 300;
+  line-height: normal;
 }
 
-@media (min-width: $tablet-width){
+@media (min-width: $tablet-width) {
   .intro {
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
+
   .intro__slogan {
     font-size: 40px;
   }
 }
 
-@media (min-width: $desktop-width){
+@media (min-width: $desktop-width) {
   .intro {
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
+
   .intro__slogan {
     font-size: 50px;
   }

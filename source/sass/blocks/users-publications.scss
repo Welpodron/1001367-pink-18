@@ -1,70 +1,80 @@
-.users-publications__header{
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-color: #112030;
-  background-position: center center;
-  background-repeat: no-repeat;
-
+.users-publications__header {
   text-align: center;
+
+  background-color: #112030;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.users-publications__title{
-  margin: 0;
-  @include Title-light($white);
+.users-publications__title {
+  font-weight: 300;
   font-size: 24px;
+  line-height: normal;
+  color: $white;
 }
 
-.users-publications__slogan{
+.users-publications__slogan {
   display: block;
-  background-color: $white;
-  @include Sans-regular;
+
+  font-weight: 400;
   color: $ebony-clay;
+
+  background-color: $white;
 }
 
-.users-publications__list{
+.users-publications__list {
   @include List-reset;
 }
 
-.users-publications__item{
-  background-color: $concrete;
+.users-publications__item {
+  line-height: 24px;
   color: $ebony-clay;
+
+  background-color: $concrete;
 }
 
-.users-publications__author-name{
-  @include Sans-bold;
+.users-publications__author-name {
+  font-style: normal;
+  font-weight: 700;
 }
 
-.users-publications__time{
-  @include Sans-light;
+.users-publications__time {
+  font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
 }
 
-.users-publications__likes{
+.users-publications__likes {
+  font-size: 12px;
   color: $cerise-red;
-  font-size: 12px;
   text-transform: uppercase;
 }
 
-@media (min-width: $tablet-width){
+@media (min-width: $tablet-width) {
   .users-publications__header {
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
+
   .users-publications__title {
     font-size: 50px;
   }
-  .users-publications__slogan{
+
+  .users-publications__slogan {
     font-size: 18px;
   }
 }
 
-@media (min-width: $desktop-width){
+@media (min-width: $desktop-width) {
   .users-publications__header {
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
+
   .users-publications__title {
     font-size: 50px;
   }
-  .users-publications__slogan{
+
+  .users-publications__slogan {
     font-size: 18px;
   }
 }
