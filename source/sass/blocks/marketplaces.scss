@@ -1,0 +1,21 @@
+.marketplaces__list {
+  @include List-reset;
+}
+
+.marketplaces__availability {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .marketplaces__availability {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .marketplaces__availability {
+    font-size: 18px;
+  }
+}

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк конкурс</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -31,8 +33,10 @@
     </header>
     <main class="page-main">
       <section class="contest">
-        <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <b class="contest__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</b>
+        <header class="contest__header">
+          <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          <b class="contest__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</b>
+        </header>
         <form class="contest__form" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="contest__information contest__information--about-user">
             <label for="last-name">Фамилия:</label>

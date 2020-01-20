@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Фотоприложение Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -11,7 +13,7 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть/Закрыть меню</button>
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper main-nav__wrapper--closed">
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item nav-list__item--active">
               <a>Главная</a>
@@ -58,7 +60,7 @@
       <section class="information">
         <header class="information__header">
           <h2 class="visually-hidden">О приложении</h2>
-          <b class="information__slogan">Устали от серости мегаполиса? Нам есть, что вам предложить!</b>
+          <b class="information__slogan">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</b>
         </header>
         <ul class="information__list">
           <li class="information__item">
@@ -190,7 +192,7 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Обратная связь</h2>
-        <b class="contacts__slogan">Остались вопросы? Свяжитесь с нами!</b>
+        <b class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</b>
         <a class="contacts__phone" href="tel:78125556666">
           <span class="contacts__description">Звоните:</span>
           +7 (812) 555-66-66

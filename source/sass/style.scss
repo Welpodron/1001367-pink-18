@@ -1,0 +1,24 @@
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/global-styles.scss";
+@import "global/mixings.scss";
+
+/*global blocks*/
+@import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+
+/*index.html*/
+@import "blocks/main-nav.scss";
+@import "blocks/nav-list.scss";
+@import "blocks/intro.scss";
+@import "blocks/marketplaces.scss";
+@import "blocks/information.scss";
+@import "blocks/contacts.scss";
+
+/*photo.html*/
+@import "blocks/users-publications.scss";
+
+/*form.html*/
+@import "blocks/contest.scss";

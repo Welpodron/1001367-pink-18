@@ -1,0 +1,70 @@
+.information__header {
+  text-align: center;
+}
+
+.information__slogan {
+  font-weight: 300;
+  line-height: normal;
+}
+
+.information__list {
+  background-color: $concrete;
+
+  @include List-reset;
+}
+
+.information__item {
+  text-align: center;
+}
+
+.information__title {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.information__description {
+  line-height: 24px;
+  color: $ebony-clay;
+}
+
+.information__item-image {
+  display: none;
+}
+
+.information__item:last-of-type .information__item-image {
+  display: inline;
+}
+
+@media (min-width: $tablet-width) {
+  .information__slogan {
+    font-size: 40px;
+  }
+
+  .information__item {
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .information__slogan {
+    font-size: 50px;
+  }
+
+  .information__item {
+    text-align: center;
+  }
+
+  .information__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .information__description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .information__item-image {
+    display: inline;
+  }
+}
