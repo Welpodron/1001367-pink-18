@@ -1,0 +1,49 @@
+.reviews__item {
+  text-align: center;
+}
+
+.reviews__author-name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.reviews__author-about {
+  display: none;
+
+  color: $ebony-clay;
+}
+
+.reviews__text {
+  color: $ebony-clay;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__author-name {
+    font-size: 20px;
+  }
+
+  .reviews__author-about {
+    display: inline;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__author-name {
+    font-size: 24px;
+  }
+
+  .reviews__author-about {
+    display: inline;
+
+    font-size: 18px;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+  }
+}
