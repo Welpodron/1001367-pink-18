@@ -1,0 +1,62 @@
+.plans {
+  background-color: $concrete;
+}
+
+.plans__list th {
+  color: $white;
+  text-transform: uppercase;
+}
+
+.plans__list th:not(.plans__legend) {
+  background-color: $ebony-clay;
+  border: solid 2px $ebony-clay;
+}
+
+.plans__name {
+  font-size: 18px;
+}
+
+.plans__price {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.plans__comparison-item td {
+  color: $ebony-clay;
+  text-transform: uppercase;
+
+  background-color: $white;
+  border: solid 2px $mercury;
+}
+
+@media (min-width: $tablet-width) {
+  .plans__name {
+    font-size: 16px;
+  }
+
+  .plans__price {
+    font-size: 18px;
+  }
+
+  .plans__feature-name {
+    display: none;
+  }
+
+  .plans__comparison-item td {
+    text-transform: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plans__name {
+    font-size: 18px;
+  }
+
+  .plans__price {
+    font-size: 24px;
+  }
+
+  .plans__comparison-item td {
+    font-size: 18px;
+  }
+}

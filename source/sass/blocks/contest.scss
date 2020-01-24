@@ -23,6 +23,71 @@
   background-color: $white;
 }
 
+.contest__information {
+  font-size: 18px;
+  color: $ebony-clay;
+
+  border: none;
+
+  &--about-user,
+  &--contact-user {
+    label {
+      font-size: 14px;
+      color: $cerise-red;
+      text-transform: uppercase;
+    }
+
+    input {
+      font-size: 18px;
+      line-height: 30px;
+      color: $ebony-clay;
+
+      border: solid 2px $mercury;
+    }
+
+    input::placeholder {
+      color: $ebony-clay;
+    }
+  }
+}
+
+.contest__information:nth-of-type(even) {
+  background-color: $concrete;
+}
+
+.contest__information legend {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $cerise-red;
+  text-transform: uppercase;
+}
+
+.contest__information textarea {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $ebony-clay;
+
+  border: solid 2px $mercury;
+}
+
+.contest__information textarea::placeholder {
+  color: $ebony-clay;
+}
+
+.contest__legend {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $ebony-clay;
+  text-transform: uppercase;
+}
+
+.contest__legend sup {
+  color: $cerise-red;
+}
+
 @media (min-width: $tablet-width) {
   .contest__header {
     background-image: url("../img/bg-back-tablet@1x.jpg");
@@ -34,6 +99,18 @@
 
   .contest__slogan {
     font-size: 18px;
+  }
+
+  .contest__information:not(:first-of-type) {
+    border: solid 2px $mercury;
+  }
+
+  .contest__information:nth-of-type(even) {
+    background-color: $white;
+  }
+
+  .contest__legend {
+    line-height: 30px;
   }
 }
 

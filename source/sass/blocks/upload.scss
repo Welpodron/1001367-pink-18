@@ -1,0 +1,15 @@
+.upload__slogan {
+  display: block;
+
+  font-weight: 400;
+  text-align: center;
+  color: $ebony-clay;
+
+  background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .upload__slogan {
+    font-size: 18px;
+  }
+}
