@@ -2,6 +2,30 @@
   background-color: $concrete;
 }
 
+.plans__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  overflow: hidden;
+
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+.plans__table {
+  width: 620px;
+
+  table-layout: fixed;
+}
+
+.plans__legend,
+.plans__comparison-feature {
+  display: none;
+}
+
 .plans__list th {
   color: $white;
   text-transform: uppercase;
@@ -13,6 +37,8 @@
 }
 
 .plans__name {
+  display: block;
+
   font-size: 18px;
 }
 
@@ -30,6 +56,15 @@
 }
 
 @media (min-width: $tablet-width) {
+  .plans__table {
+    table-layout: auto;
+  }
+
+  .plans__legend,
+  .plans__comparison-feature {
+    display: table-cell;
+  }
+
   .plans__name {
     font-size: 16px;
   }
@@ -45,9 +80,22 @@
   .plans__comparison-item td {
     text-transform: none;
   }
+
+  .plans__toggles {
+    display: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .plans__table {
+    table-layout: auto;
+  }
+
+  .plans__legend,
+  .plans__comparison-feature {
+    display: table-cell;
+  }
+
   .plans__name {
     font-size: 18px;
   }
@@ -58,5 +106,9 @@
 
   .plans__comparison-item td {
     font-size: 18px;
+  }
+
+  .plans__toggles {
+    display: none;
   }
 }

@@ -6,7 +6,13 @@
   .research {
     display: block;
 
-    background-color: $concrete;
+    background-color: $white;
+  }
+
+  .research__wrapper {
+    display: flex;
+    width: 620px;
+    margin: 0 auto;
   }
 
   .research__title {
@@ -26,6 +32,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .research {
+    background-color: $concrete;
+  }
+
   .research__title {
     line-height: 30px;
   }

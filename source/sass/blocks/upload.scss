@@ -1,5 +1,22 @@
+.upload__wrapper {
+  background-color: $concrete;
+}
+
+.upload__wrapper .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload__header {
+  width: 100%;
+}
+
 .upload__slogan {
   display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 100px 0;
 
   font-weight: 400;
   text-align: center;
@@ -8,8 +25,59 @@
   background-color: $white;
 }
 
+.upload__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload__slider {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .upload__wrapper .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
   .upload__slogan {
+    width: 440px;
+
     font-size: 18px;
+  }
+
+  .upload__form {
+    width: 260px;
+  }
+
+  .upload__slider {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .upload__wrapper .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .upload__slogan {
+    width: 580px;
+
+    font-size: 18px;
+  }
+
+  .upload__form {
+    width: 260px;
+  }
+
+  .upload__slider {
+    display: block;
   }
 }

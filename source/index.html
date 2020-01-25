@@ -2,91 +2,106 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Фотоприложение Пинк</title>
-    <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип фотоприложения «Пинк»">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть/Закрыть меню</button>
-        <div class="main-nav__wrapper main-nav__wrapper--closed">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item nav-list__item--active">
-              <a>Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="photo.html">Фотографии</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип фотоприложения «Пинк»">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть/Закрыть меню</button>
+          <div class="main-nav__wrapper main-nav__wrapper--closed">
+            <ul class="main-nav__list nav-list">
+              <li class="nav-list__item nav-list__item--active">
+                <a>Главная</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Фотоприложение «Пинк» – раскрасьте серые будни</h1>
       <section class="intro">
-        <header class="intro__header">
-          <b class="intro__slogan">Взгляните на жизнь иначе!</b>
-          <img class="intro__image" src="https://via.placeholder.com/498x314" width="498" height="314" alt="Пример работы фотоприложения «Пинк» на мобильном телефоне">
-        </header>
-        <div class="download">
-          <h2 class="visually-hidden">Скачать приложение</h2>
-          <a class="download__button" href="https://www.apple.com/iphone/appstore/">Скачать приложение</a>
-          <div class="marketplaces">
-            <ul class="marketplaces__list">
-              <li class="marketplaces__item">
-                <a class="marketplaces__link marketplaces__link--app-store" href="https://www.apple.com/iphone/appstore/">Фотоприложение «Пинк» в App Store</a>
-              </li>
-              <li class="marketplaces__item">
-                <a class="marketplaces__link marketplaces__link--google-play" href="https://www.microsoft.com/store/">Фотоприложение «Пинк» в Google Play</a>
-              </li>
-              <li class="marketplaces__item">
-                <a class="marketplaces__link marketplaces__link--microsoft-store" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone/">Фотоприложение «Пинк» в Microsoft Store</a>
-              </li>
-            </ul>
-            <p class="marketplaces__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="intro__wrapper">
+          <div class="container">
+          <header class="intro__header">
+            <b class="intro__slogan">Взгляните на жизнь иначе!</b>
+          </header>
+          <div class="download">
+            <h2 class="visually-hidden">Скачать приложение</h2>
+            <a class="download__button button" href="https://www.apple.com/iphone/appstore/">Скачать приложение</a>
+            <div class="marketplaces">
+              <ul class="marketplaces__list">
+                <li class="marketplaces__item">
+                  <a class="marketplaces__link marketplaces__link--app-store" href="https://www.apple.com/iphone/appstore/">Фотоприложение «Пинк» в App Store</a>
+                </li>
+                <li class="marketplaces__item">
+                  <a class="marketplaces__link marketplaces__link--google-play" href="https://www.microsoft.com/store/">Фотоприложение «Пинк» в Google Play</a>
+                </li>
+                <li class="marketplaces__item">
+                  <a class="marketplaces__link marketplaces__link--microsoft-store" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone/">Фотоприложение «Пинк» в Microsoft Store</a>
+                </li>
+              </ul>
+              <p class="marketplaces__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
           </div>
         </div>
+      </div>
       </section>
       <section class="information">
-        <header class="information__header">
+        <header class="information__header container">
           <h2 class="visually-hidden">О приложении</h2>
           <b class="information__slogan">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</b>
         </header>
-        <ul class="information__list">
-          <li class="information__item">
-            <h3 class="information__title">Поднимает настроение</h3>
-            <p class="information__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            <img class="information__item-image information__item-image--original" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Оригинальное изображение">
-          </li>
-          <li class="information__item">
-            <h3 class="information__title">Меняет мир вокруг</h3>
-            <p class="information__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            <img class="information__item-image information__item-image--color-overlay" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Изображение с эффектом наложения розового цвета">
-          </li>
-          <li class="information__item">
-            <h3 class="information__title">Заводит новых друзей</h3>
-            <p class="information__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            <img class="information__item-image information__item-image--full-overlay" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Изображение с эффектом наложения розового цвета, а также наложенный сверху текст и картинка">
-          </li>
-        </ul>
+        <div class="information__list-wrapper">
+          <ul class="information__list container">
+            <li class="information__item">
+              <h3 class="information__title">Поднимает настроение</h3>
+              <p class="information__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              <img class="information__item-image information__item-image--original" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Оригинальное изображение">
+            </li>
+            <li class="information__item">
+              <h3 class="information__title">Меняет мир вокруг</h3>
+              <p class="information__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <img class="information__item-image information__item-image--color-overlay" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Изображение с эффектом наложения розового цвета">
+            </li>
+            <li class="information__item">
+              <h3 class="information__title">Заводит новых друзей</h3>
+              <p class="information__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              <img class="information__item-image information__item-image--full-overlay" src="https://via.placeholder.com/157x320" width="157" height="320" alt="Изображение с эффектом наложения розового цвета, а также наложенный сверху текст и картинка">
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="research">
-        <h3 class="research__title">Эффект на 24 часа!</h3>
-        <p class="research__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-        <a class="research__link" href="#">Узнать больше о исследовании</a>
+        <div class="research__wrapper">
+          <div class="research__image"></div>
+          <header class="research__header">
+            <h3 class="research__title">Эффект на 24 часа!</h3>
+            <p class="research__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="research__link" href="#">Узнать больше о исследовании</a>
+          </header>
+        </div>
       </section>
       <section class="reviews">
-        <div class="reviews__wrapper slider">
+        <div class="reviews__wrapper container slider">
           <h2 class="visually-hidden">Отзывы пользователей</h2>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item reviews__item--active slider__item">
@@ -191,43 +206,51 @@
         </div>
       </section>
       <section class="contacts">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <b class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</b>
-        <a class="contacts__phone" href="tel:78125556666">
-          <span class="contacts__description">Звоните:</span>
-          +7 (812) 555-66-66
-        </a>
-        <a class="contacts__email" href="mailto:mail@htmlacademy.ru">
-          <span class="contacts__description">Пишите:</span>
-          mail@htmlacademy.ru
-        </a>
-        <address class="contacts__address">
-          <a class="contacts__address-link" href="https://goo.gl/maps/ivC5rPFohgpSQ5V39" target="_blank">
-            <span class="contacts__description">Приезжайте в гости:</span>
-            ул. Большая Конюшенная, 19/8
-          </a>
-        </address>
+        <div class="contacts__wrapper">
+            <header class="contacts__header">
+              <h2 class="visually-hidden">Обратная связь</h2>
+              <b class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</b>
+            </header>
+            <div class="contacts__information">
+              <a class="contacts__phone" href="tel:78125556666">
+                <span class="contacts__description">Звоните:</span>
+              +7 (812) 555-66-66
+              </a>
+              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">
+                <span class="contacts__description">Пишите:</span>
+              mail@htmlacademy.ru
+              </a>
+              <address class="contacts__address">
+                <a class="contacts__address-link" href="https://goo.gl/maps/ivC5rPFohgpSQ5V39" target="_blank">
+                <span class="contacts__description">Приезжайте в гости:</span>
+                ул. Большая Конюшенная, 19/8
+              </a>
+              </address>
+            </div>
+        </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1578228100289!5m2!1sru!2sru" width="800" height="600" frameborder="0" style="width:100%;border:0;"></iframe>
       </section>
     </main>
-    <footer class="page-footer">
-      <a class="page-footer__logo">
-        <img class="page-footer__logo-image" src="https://via.placeholder.com/147x40" width="147" height="40" alt="Логотип фотоприложения «Пинк»">
-      </a>
-        <ul class="social">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в twitter</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в facebook</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/">Наш канал на Youtube</a>
-          </li>
-        </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    <footer class="page-footer page-footer--index">
+      <div class="page-footer__wrapper container">
+        <a class="page-footer__logo">
+          <img class="page-footer__logo-image" src="https://via.placeholder.com/147x40" width="147" height="40" alt="Логотип фотоприложения «Пинк»">
+        </a>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в twitter</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/">Наш канал на Youtube</a>
+            </li>
+          </ul>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </footer>
   </body>
