@@ -16,9 +16,19 @@
 }
 
 .plans__table {
-  width: 620px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 98px;
+  margin-bottom: 45px;
+}
 
-  table-layout: fixed;
+.plans__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.plans__header tr {
+  display: flex;
 }
 
 .plans__legend,
@@ -27,18 +37,67 @@
 }
 
 .plans__list th {
+  width: 276px;
+
   color: $white;
   text-transform: uppercase;
 }
 
+.plans__comparison-list td {
+  width: 276px;
+}
+
 .plans__list th:not(.plans__legend) {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+
   background-color: $ebony-clay;
+}
+
+.plans__list th:not(.plans__legend):not(.plans__popular) {
   border: solid 2px $ebony-clay;
 }
 
-.plans__name {
-  display: block;
+.plans__popular {
+  position: relative;
 
+  border-right: solid 2px $mercury;
+  border-left: solid 2px $mercury;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 74px;
+    height: 73px;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &::after {
+    content: "Хит";
+    position: absolute;
+    top: 18px;
+    left: 8px;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+
+    transform: rotateZ(-45deg);
+  }
+}
+
+.plans__name {
   font-size: 18px;
 }
 
@@ -47,22 +106,103 @@
   font-size: 24px;
 }
 
-.plans__comparison-item td {
+.plans__comparison-item {
+  display: flex;
+}
+
+.plans__comparison-item td:not(.plans__comparison-feature) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 19px;
+
   color: $ebony-clay;
   text-transform: uppercase;
 
   background-color: $white;
-  border: solid 2px $mercury;
+  border: solid 1px $mercury;
+}
+
+.plans__availability {
+  display: block;
+
+  font-size: 0;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  &--available {
+    width: 31px;
+    height: 21px;
+
+    background-image: url("../img/icon-yes.svg");
+  }
+
+  &--not-available {
+    width: 27px;
+    height: 26px;
+
+    background-image: url("../img/icon-no.svg");
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .plans__table {
-    table-layout: auto;
+  .plans__list th {
+    width: 154px;
   }
 
-  .plans__legend,
+  .plans__popular {
+    &::before {
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/bg-hit-tablet.svg");
+    }
+
+    &::after {
+      top: 10px;
+      left: 5px;
+    }
+  }
+
+  .plans__list th:not(.plans__legend) {
+    padding: 10px 0;
+  }
+
+  .plans__list th:nth-of-type(2) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  .plans__list th:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .plans__comparison-item td {
+    width: 154px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: none;
+  }
+
+  .plans__comparison-feature,
+  .plans__legend {
+    display: flex;
+  }
+
   .plans__comparison-feature {
-    display: table-cell;
+    padding-left: 15px;
+
+    background-color: $white;
+    border: solid 1px $mercury;
+  }
+
+  .plans__comparison-item td:not(.plans__comparison-feature) {
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .plans__name {
@@ -77,23 +217,49 @@
     display: none;
   }
 
-  .plans__comparison-item td {
-    text-transform: none;
-  }
-
   .plans__toggles {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .plans__table {
-    table-layout: auto;
+  .plans__list th {
+    width: 234px;
   }
 
-  .plans__legend,
-  .plans__comparison-feature {
-    display: table-cell;
+  .plans__popular {
+    &::before {
+      width: 74px;
+      height: 73px;
+
+      background-image: url("../img/bg-hit.svg");
+    }
+
+    &::after {
+      top: 17px;
+      left: 9px;
+    }
+  }
+
+  .plans__list th:not(.plans__legend) {
+    padding: 10px 0;
+  }
+
+  .plans__list th:nth-of-type(2) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  .plans__list th:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .plans__comparison-item td {
+    width: 234px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
   }
 
   .plans__name {
@@ -102,10 +268,6 @@
 
   .plans__price {
     font-size: 24px;
-  }
-
-  .plans__comparison-item td {
-    font-size: 18px;
   }
 
   .plans__toggles {

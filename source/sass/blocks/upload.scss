@@ -27,14 +27,139 @@
 
 .upload__form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.upload__filter-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.upload__filter-block {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  margin-top: 42px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.upload__filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 40px;
+
+  font-size: 0;
+
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+
+    fill: $cerise-red;
+  }
+
+  &--crop {
+    svg {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &--fill {
+    svg {
+      width: 48px;
+      height: 43px;
+    }
+  }
+
+  &--contrast {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 
 .upload__slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
   display: none;
+  width: 240px;
+  height: 2px;
+
+  background: $ebony-clay;
+  transform: translateX(18px);
+
+  &::-webkit-slider-thumb {
+    width: 13px;
+    height: 13px;
+
+    background: $concrete;
+    border: solid 2px $cerise-red;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
   &--active {
     display: block;
+  }
+
+  &--active::-webkit-slider-thumb {
+    background: $cerise-red;
+  }
+}
+
+.upload__form .button {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.upload__button-submit {
+  color: $cerise-red;
+
+  border-color: $cerise-red;
+
+  &:hover {
+    color: $white;
+
+    background-color: $cerise-red;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: $cerise-red;
+  }
+}
+
+.upload__button-reset {
+  color: rgba(40, 54, 69, 0.1);
+
+  border-color: rgba($color: #283645, $alpha: 0.1);
+
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+
+    border-color: rgba($color: #283645, $alpha: 0.3);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: rgba($color: #283645, $alpha: 0.3);
+    border-color: transparent;
   }
 }
 
@@ -52,11 +177,86 @@
   }
 
   .upload__form {
-    width: 260px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 275px;
+  }
+
+  .upload__filter-wrapper {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .upload__filter-block {
+    position: relative;
+
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+
+      display: block;
+      width: 100%;
+      height: 1px;
+
+      background-color: $ebony-clay;
+      opacity: 0.1;
+    }
+  }
+
+  .upload__filter {
+    width: 25px;
+    height: 25px;
+
+    opacity: 1;
+
+    svg {
+      fill: $cerise-red;
+    }
+
+    &--crop {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--fill {
+      svg {
+        width: 24px;
+        height: 22px;
+      }
+    }
+
+    &--contrast {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      path {
+        fill: $cerise-red;
+      }
+    }
   }
 
   .upload__slider {
+    position: relative;
+
     display: block;
+    width: 202px;
+  }
+
+  .upload__form .button {
+    width: 260px;
+    margin: 0 auto;
+    margin-bottom: 24px;
   }
 }
 
@@ -74,10 +274,50 @@
   }
 
   .upload__form {
-    width: 260px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 410px;
+  }
+
+  .upload__filter-block {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .upload__filter {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+
+    &--crop {
+      svg {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    &--fill {
+      svg {
+        width: 48px;
+        height: 43px;
+      }
+    }
+
+    &--contrast {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
   }
 
   .upload__slider {
-    display: block;
+    width: 288px;
+  }
+
+  .upload__form .button {
+    width: 183px;
   }
 }

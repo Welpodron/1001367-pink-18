@@ -4,24 +4,27 @@
   width: 100%;
 
   background-color: rgba($color: #000000, $alpha: 0.3);
-}
 
-.page-header__wrapper {
-  position: relative;
+  &--menu-opened {
+    position: relative;
 
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
-}
-
-@media (min-width: $tablet-width) {
-  .page-header__wrapper {
-    width: 620px;
+    background-color: $ebony-clay;
   }
 }
 
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 @media (min-width: $desktop-width) {
+  .page-header {
+    position: absolute;
+
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
