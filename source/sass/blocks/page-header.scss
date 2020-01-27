@@ -1,0 +1,33 @@
+.page-header {
+  position: absolute;
+
+  width: 100%;
+
+  background-color: rgba($color: #000000, $alpha: 0.3);
+
+  &--menu-opened {
+    position: relative;
+
+    background-color: $ebony-clay;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    position: absolute;
+
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+
+  .page-header__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 960px;
+  }
+}

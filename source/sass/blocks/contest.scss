@@ -1,0 +1,238 @@
+.contest__header {
+  text-align: center;
+}
+
+.contest__title {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: normal;
+  color: $white;
+
+  background-color: #112030;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contest__slogan {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  font-weight: 400;
+  color: $ebony-clay;
+
+  background-color: $white;
+}
+
+.contest__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contest__information {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 18px;
+  color: $ebony-clay;
+
+  border: none;
+
+  &--contact-user legend {
+    display: none;
+  }
+
+  &--about-user,
+  &--contact-user {
+    label {
+      padding-left: 15px;
+
+      font-size: 14px;
+      color: $cerise-red;
+      text-transform: uppercase;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+
+      font-size: 18px;
+      line-height: 30px;
+      color: $ebony-clay;
+
+      border: solid 2px $mercury;
+    }
+
+    input::placeholder {
+      color: $ebony-clay;
+    }
+  }
+}
+
+.contest__information:nth-of-type(even) {
+  background-color: $concrete;
+}
+
+.contest__information-achievements-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.contest__information legend {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $cerise-red;
+  text-transform: uppercase;
+}
+
+.contest__information textarea {
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $ebony-clay;
+
+  border: solid 2px $mercury;
+}
+
+.contest__information textarea::placeholder {
+  color: $ebony-clay;
+}
+
+.contest__legend {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $ebony-clay;
+  text-transform: uppercase;
+}
+
+.contest__legend sup {
+  color: $cerise-red;
+}
+
+.contest__button-submit {
+  width: 280px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $jungle-green;
+  border: none;
+  border-radius: 3px;
+}
+
+@media (min-width: $tablet-width) {
+  .contest__title {
+    font-size: 50px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  .contest__slogan {
+    width: 440px;
+
+    font-size: 18px;
+  }
+
+  .contest__information:not(:first-of-type) {
+    border: solid 2px $mercury;
+  }
+
+  .contest__information:nth-of-type(even) {
+    background-color: $white;
+  }
+
+  .contest__information {
+    &--contact-user legend {
+      display: block;
+    }
+
+    &--about-user {
+      .contest__information-block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      label {
+        margin-right: 15px;
+      }
+    }
+
+    &--contact-user {
+      .contest__information-block {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+      }
+
+      .contest__information-block:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .contest__legend {
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contest__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contest__information {
+    width: 100%;
+  }
+
+  .contest__information-achievements-block {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contest__information-contact-block {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .contest__information-block {
+      margin-bottom: 0;
+    }
+  }
+
+  .contest__information:nth-of-type(1),
+  .contest__information:nth-of-type(2) {
+    width: 440px;
+  }
+
+  .contest__title {
+    font-size: 50px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  .contest__slogan {
+    width: 580px;
+
+    font-size: 18px;
+  }
+}

@@ -2,158 +2,237 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк публикации пользователей</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
   <body>
-    <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип фотоприложения «Пинк»">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть/Закрыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="nav-list__item nav-list__item--active">
-              <a>Фотографии</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <header class="page-header page-header--menu-opened">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип фотоприложения «Пинк»">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть/Закрыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list nav-list">
+              <li class="nav-list__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="nav-list__item nav-list__item--active">
+                <a>Фотографии</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="users-publications">
-        <h1 class="users-publications__title">Фотографии пользователей</h1>
-        <b class="users-publications__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</b>
-        <ul class="users-publications__list">
-          <li class="users-publications__item users-publications__item--hot">
-            <blockquote>
+          <header class="users-publications__header">
+            <h1 class="users-publications__title">Фотографии<br>пользователей</h1>
+            <b class="users-publications__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</b>
+          </header>
+          <div class="user-publications__wrapper container">
+          <ul class="users-publications__list">
+            <li class="users-publications__item users-publications__item--hot">
               <a class="users-publications__picture" href="#">
                 <img class="users-publications__image" src="https://via.placeholder.com/320x137" width="320" height="137" alt="Фото пользователя: Анна">
               </a>
-              <cite class="users-publications__author-name">Анна</cite>
-              <span class="users-publications__time">(5 минут назад)</span>
-              <p class="users-publications__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <span class="users-publications__likes">Нравится: 215</span>
-              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
-            </blockquote>
-          </li>
-          <li class="users-publications__item">
-            <blockquote>
+              <blockquote>
+                <div class="users-publications__author-block">
+                  <cite class="users-publications__author-name">Анна</cite>
+                  <span class="users-publications__time">(5 минут назад)</span>
+                </div>
+                <p class="users-publications__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <div class="users-publications__likes-block">
+                  <span class="users-publications__likes">Нравится: 215</span>
+                  <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
+                </div>
+              </blockquote>
+            </li>
+            <li class="users-publications__item">
               <a class="users-publications__picture" href="#">
                 <img class="users-publications__image" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото пользователя: Левон">
               </a>
-              <cite class="users-publications__author-name">Левон</cite>
-              <span class="users-publications__time">(5 часов назад)</span>
-              <p class="users-publications__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <span class="users-publications__likes">Нравится: 356</span>
-              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
-            </blockquote>
-          </li>
-          <li class="users-publications__item">
-            <blockquote>
+              <blockquote>
+                <div class="users-publications__author-block">
+                  <cite class="users-publications__author-name">Левон</cite>
+                  <span class="users-publications__time">(5 часов назад)</span>
+                </div>
+                <p class="users-publications__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <div class="users-publications__likes-block">
+                  <span class="users-publications__likes">Нравится: 356</span>
+                  <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
+                </div>
+              </blockquote>
+            </li>
+            <li class="users-publications__item">
               <a class="users-publications__picture" href="#">
                 <img class="users-publications__image" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото пользователя: Антон">
               </a>
-              <cite class="users-publications__author-name">Антон</cite>
-              <span class="users-publications__time">(12 часов назад)</span>
-              <p class="users-publications__text">Соседи будут рады!</p>
-              <span class="users-publications__likes">Нравится: 666</span>
-              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
-            </blockquote>
-          </li>
-          <li class="users-publications__item">
-            <blockquote>
+              <blockquote>
+                <div class="users-publications__author-block">
+                  <cite class="users-publications__author-name">Антон</cite>
+                  <span class="users-publications__time">(12 часов назад)</span>
+                </div>
+                <p class="users-publications__text">Соседи будут рады!</p>
+                <div class="users-publications__likes-block">
+                  <span class="users-publications__likes">Нравится: 666</span>
+                  <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
+                </div>
+              </blockquote>
+            </li>
+            <li class="users-publications__item">
               <a class="users-publications__picture" href="#">
                 <img class="users-publications__image" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото пользователя: Борис">
               </a>
-              <cite class="users-publications__author-name">Борис</cite>
-              <span class="users-publications__time">(20 часов назад)</span>
-              <p class="users-publications__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <span class="users-publications__likes">Нравится: 215</span>
-              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
-            </blockquote>
-          </li>
-          <li class="users-publications__item">
-            <blockquote>
+              <blockquote>
+                <div class="users-publications__author-block">
+                  <cite class="users-publications__author-name">Борис</cite>
+                  <span class="users-publications__time">(20 часов назад)</span>
+                </div>
+                <p class="users-publications__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <div class="users-publications__likes-block">
+                  <span class="users-publications__likes">Нравится: 215</span>
+                  <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
+                </div>
+              </blockquote>
+            </li>
+            <li class="users-publications__item">
               <a class="users-publications__picture" href="#">
                 <img class="users-publications__image" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото пользователя: Сергей">
               </a>
-              <cite class="users-publications__author-name">Сергей</cite>
-              <span class="users-publications__time">(25 часов назад)</span>
-              <p class="users-publications__text">Самая кубанская в мире!</p>
-              <span class="users-publications__likes">Нравится: 4</span>
-              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
-            </blockquote>
-          </li>
-          <li class="users-publications__item">
-            <blockquote>
+              <blockquote>
+                <div class="users-publications__author-block">
+                  <cite class="users-publications__author-name">Сергей</cite>
+                  <span class="users-publications__time">(25 часов назад)</span>
+                </div>
+                <p class="users-publications__text">Самая кубанская в мире!</p>
+                <div class="users-publications__likes-block">
+                  <span class="users-publications__likes">Нравится: 4</span>
+                  <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
+                </div>
+              </blockquote>
+            </li>
+            <li class="users-publications__item">
               <a class="users-publications__picture" href="#">
                 <img class="users-publications__image" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото пользователя: Максим">
               </a>
-              <cite class="users-publications__author-name">Максим</cite>
-              <span class="users-publications__time">(40 часов назад)</span>
-              <p class="users-publications__text">Где снег-то?</p>
-              <span class="users-publications__likes">Нравится: 150</span>
-              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
-            </blockquote>
-          </li>
-          <li class="users-publications__item">
-            <blockquote>
+              <blockquote>
+                <div class="users-publications__author-block">
+                  <cite class="users-publications__author-name">Максим</cite>
+                  <span class="users-publications__time">(40 часов назад)</span>
+                </div>
+                <p class="users-publications__text">Где снег-то?</p>
+                <div class="users-publications__likes-block">
+                  <span class="users-publications__likes">Нравится: 150</span>
+                  <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
+                </div>
+              </blockquote>
+            </li>
+            <li class="users-publications__item">
               <a class="users-publications__picture" href="#">
                 <img class="users-publications__image" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото пользователя: Надежда">
               </a>
-              <cite class="users-publications__author-name">Надежда</cite>
-              <span class="users-publications__time">(45 часов назад)</span>
-              <p class="users-publications__text">Всем GM и взаимные лайки!</p>
-              <span class="users-publications__likes">Нравится: 2560</span>
-              <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
-            </blockquote>
-          </li>
-        </ul>
+              <blockquote>
+                <div class="users-publications__author-block">
+                  <cite class="users-publications__author-name">Надежда</cite>
+                  <span class="users-publications__time">(45 часов назад)</span>
+                </div>
+                <p class="users-publications__text">Всем GM и взаимные лайки!</p>
+                <div class="users-publications__likes-block">
+                  <span class="users-publications__likes">Нравится: 2560</span>
+                  <button class="users-publications__like-button" type="button">Поставить/Убрать лайк</button>
+                </div>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="upload">
-        <h2 class="visually-hidden">Создать и запостить публикацию</h2>
-        <b class="upload__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</b>
-        <img class="upload__image" src="https://via.placeholder.com/300x400" width="300" height="400" alt="Фото для публикации">
-        <form class="upload__form" action="https://echo.htmlacademy.ru" method="GET">
-          <label class="visually-hidden" for="filter__crop">Обрезать изображение</label>
-          <input class="upload__slider upload__slider--active" type="range" min="1" max="100" value="70" id="filter__crop">
-          <label class="visually-hidden" for="filter__fill">Заливка изображения</label>
-          <input class="upload__slider" type="range" min="1" max="100" value="20" id="filter__fill">
-          <label class="visually-hidden" for="filter__fill">Контраст изображения</label>
-          <input class="upload__slider" type="range" min="1" max="100" value="50" id="filter__contrast">
-          <button class="upload__button-submit" type="submit">Запостить</button>
-          <button class="upload__button-reset" type="reset">Отмена</button>
-        </form>
+          <header class="upload__header">
+            <h2 class="visually-hidden">Создать и запостить публикацию</h2>
+            <b class="upload__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</b>
+          </header>
+          <div class="upload__wrapper">
+            <div class="container">
+              <img class="upload__image" src="https://via.placeholder.com/300x400" width="300" height="400" alt="Фото для публикации">
+              <form class="upload__form" action="https://echo.htmlacademy.ru" method="GET">
+                <div class="upload__filter-wrapper">
+                  <div class="upload__filter-block">
+                    <label class="upload__filter upload__filter--active upload__filter--crop" for="filter__crop">
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                        <path fill="none" d="M0,0h48v48H0V0z"/>
+                        <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+                      </svg>
+                      Обрезать изображение
+                    </label>
+                    <input class="upload__slider upload__slider--active" type="range" min="1" max="100" value="70" id="filter__crop">
+                  </div>
+                  <div class="upload__filter-block">
+                    <label class="upload__filter upload__filter--fill" for="filter__fill">
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                        <path fill="none" d="M0,0h48v48H0V0z"/>
+                        <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+                        <rect y="40" width="48" height="3"/>
+                      </svg>
+                      Заливка изображения
+                    </label>
+                    <input class="upload__slider" type="range" min="1" max="100" value="20" id="filter__fill">
+                  </div>
+                  <div class="upload__filter-block">
+                    <label class="upload__filter upload__filter--contrast" for="filter__contrast">
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                        <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+                        <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+                      </svg>
+                      Контраст изображения
+                    </label>
+                    <input class="upload__slider" type="range" min="1" max="100" value="50" id="filter__contrast">
+                  </div>
+                </div>
+                <button class="upload__button-submit button" type="submit">Запостить</button>
+                <button class="upload__button-reset button" type="reset">Отмена</button>
+              </form>
+            </div>
+          </div>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="https://via.placeholder.com/147x40" width="147" height="40" alt="Логотип фотоприложения «Пинк»">
-      </a>
-        <ul class="social">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в twitter</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в facebook</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/">Наш канал на Youtube</a>
-          </li>
-        </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="page-footer__wrapper container">
+        <a class="page-footer__logo" href="index.html">
+          <img class="page-footer__logo-image" src="https://via.placeholder.com/147x40" width="147" height="40" alt="Логотип фотоприложения «Пинк»">
+        </a>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в twitter</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/">Наш канал на Youtube</a>
+            </li>
+          </ul>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+            <svg fill="#d22856" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
