@@ -1,3 +1,43 @@
 .social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+
   @include List-reset;
+}
+
+.social__link {
+  display: block;
+  width: 46px;
+  height: 46px;
+
+  font-size: 0;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: solid 3px rgba($color: #283645, $alpha: 0.1);
+  border-radius: 50%;
+
+  &:hover {
+    border: solid 3px rgba($color: #283645, $alpha: 1);
+  }
+
+  &:active {
+    border: solid 3px rgba($color: #283645, $alpha: 0.4);
+    opacity: 0.3;
+  }
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
 }

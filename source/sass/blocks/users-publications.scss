@@ -1,5 +1,27 @@
+.user-publications__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.users-publications .container {
+  width: 320px;
+}
+
 .users-publications__header {
   text-align: center;
+}
+
+.users-publications__title {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: normal;
+  color: $white;
 
   background-color: #112030;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -7,15 +29,11 @@
   background-position: center center;
 }
 
-.users-publications__title {
-  font-weight: 300;
-  font-size: 24px;
-  line-height: normal;
-  color: $white;
-}
-
 .users-publications__slogan {
   display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 100px 0;
 
   font-weight: 400;
   color: $ebony-clay;
@@ -24,14 +42,44 @@
 }
 
 .users-publications__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include List-reset;
 }
 
 .users-publications__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin-bottom: 20px;
+
   line-height: 24px;
   color: $ebony-clay;
+}
+
+.users-publications__item:first-of-type {
+  width: 100%;
+}
+
+.users-publications__item .users-publications__image {
+  display: block;
+}
+
+.users-publications__item blockquote {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0;
+  padding: 14px 17px;
 
   background-color: $concrete;
+}
+
+.users-publications__item:first-of-type .users-publications__image {
+  width: 100%;
 }
 
 .users-publications__author-name {
@@ -45,36 +93,170 @@
   text-transform: uppercase;
 }
 
+.users-publications__likes-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+
+  justify-self: flex-end;
+}
+
 .users-publications__likes {
+  order: 2;
+
   font-size: 12px;
   color: $cerise-red;
   text-transform: uppercase;
 }
 
+.users-publications__like-button {
+  display: block;
+  order: 1;
+  width: 13px;
+  height: 12px;
+  margin: 0;
+  margin-right: 19px;
+  padding: 0;
+
+  font-size: 0;
+
+  background-color: transparent;
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border: none;
+}
+
 @media (min-width: $tablet-width) {
-  .users-publications__header {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
+  .users-publications .container {
+    width: 660px;
   }
 
   .users-publications__title {
     font-size: 50px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
   .users-publications__slogan {
+    width: 440px;
+
     font-size: 18px;
+  }
+
+  .users-publications__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .users-publications__item:first-of-type {
+    width: 620px;
+    margin-bottom: 50px;
+  }
+
+  .users-publications__item {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .users-publications__item:nth-of-type(odd) {
+    margin-right: 0;
+  }
+
+  .users-publications__item blockquote {
+    width: 100%;
+    min-height: 190px;
+    padding: 30px 27px;
+  }
+
+  .users-publications__item:first-of-type blockquote {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 620px;
+    min-height: auto;
+  }
+
+  .users-publications__item:first-of-type .users-publications__author-block {
+    width: 50%;
+  }
+
+  .users-publications__item:first-of-type .users-publications__likes-block {
+    justify-content: flex-end;
+    order: 2;
+    width: 50%;
+  }
+
+  .users-publications__item:first-of-type .users-publications__text {
+    order: 3;
+  }
+
+  .users-publications__item:first-of-type .users-publications__likes {
+    margin-right: 17px;
+  }
+
+  .users-publications__item:not(:first-of-type) .users-publications__likes-block {
+    justify-content: space-between;
+  }
+
+  .users-publications__likes {
+    order: 1;
+  }
+
+  .users-publications__like-button {
+    order: 2;
+    margin-right: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .users-publications__header {
+  .users-publications__title {
+    font-size: 50px;
+
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 
-  .users-publications__title {
-    font-size: 50px;
+  .users-publications__slogan {
+    width: 580px;
+
+    font-size: 18px;
   }
 
-  .users-publications__slogan {
-    font-size: 18px;
+  .users-publications__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 940px;
+  }
+
+  .users-publications__item:first-of-type {
+    width: 940px;
+  }
+
+  .users-publications__item:first-of-type blockquote {
+    position: relative;
+
+    width: 100%;
+  }
+
+  .users-publications__item {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 54px;
+  }
+
+  .users-publications__item:nth-of-type(odd) {
+    margin-right: auto;
+  }
+
+  .users-publications__item:not(:first-of-type):nth-of-type(3n+1) {
+    margin-right: 0;
+  }
+
+  .users-publications__item:first-of-type .users-publications__likes-block {
+    position: absolute;
+    right: 32px;
   }
 }

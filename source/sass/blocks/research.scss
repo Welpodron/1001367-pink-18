@@ -6,7 +6,51 @@
   .research {
     display: block;
 
-    background-color: $concrete;
+    background-color: $white;
+  }
+
+  .research__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 52px 0;
+  }
+
+  .research__image {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .research__image svg {
+    width: 238px;
+    height: 276px;
+  }
+
+  .research__image span {
+    position: absolute;
+    top: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 202px;
+    height: 202px;
+
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 149.5px;
+    color: $cerise-red;
+
+    background-image: url("../img/icon-editor-diagram-fill.svg");
+    background-position: center center;
+    background-size: contain;
+  }
+
+  .research__header {
+    width: 310px;
   }
 
   .research__title {
@@ -22,10 +66,40 @@
   .research__link {
     line-height: 24px;
     color: $cerise-red;
+
+    border-bottom: solid 1px $cerise-red;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .research {
+    background-color: $concrete;
+  }
+
+  .research__wrapper {
+    padding-top: 17px;
+    padding-bottom: 67px;
+  }
+
+  .research__header {
+    width: 525px;
+  }
+
+  .research__image svg {
+    width: 298px;
+    height: 345px;
+  }
+
+  .research__image span {
+    top: 70px;
+
+    width: 253px;
+    height: 253px;
+
+    font-size: 120px;
+    line-height: 187px;
+  }
+
   .research__title {
     line-height: 30px;
   }

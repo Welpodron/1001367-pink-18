@@ -1,4 +1,6 @@
 .nav-list__item {
+  padding: 20px 0;
+
   text-align: center;
 
   background-color: $ebony-clay;
@@ -7,11 +9,28 @@
 
 .nav-list__item a {
   display: block;
-  padding: 20px 0;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   color: $white;
   text-transform: uppercase;
+}
+
+@media (min-width: $desktop-width) {
+  .nav-list__item {
+    background-color: transparent;
+    box-shadow: none;
+
+    &--active {
+      a {
+        border-bottom: solid 2px $white;
+      }
+    }
+  }
+
+  .nav-list__item a {
+    font-weight: 400;
+    text-transform: none;
+  }
 }

@@ -1,0 +1,36 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  background-color: $mirage;
+}
+
+.download__button {
+  width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .download {
+    width: 300px;
+
+    background-color: transparent;
+  }
+
+  .download__button {
+    width: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download {
+    width: 300px;
+
+    background-color: transparent;
+  }
+
+  .download__button {
+    width: 300px;
+  }
+}

@@ -1,8 +1,33 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 155px;
+}
+
 .copyright__text {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: $ebony-clay;
+}
+
+.copyright__link {
+  display: flex;
+  width: 27px;
+  height: 34px;
+
+  font-size: 0;
+
+  &:hover {
+    svg {
+      fill: $ebony-clay;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $desktop-width) {
