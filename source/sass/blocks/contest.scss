@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.contest__form {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .contest__title {
   display: block;
   width: 100%;
@@ -17,6 +25,11 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .contest__slogan {
@@ -31,19 +44,113 @@
   background-color: $white;
 }
 
-.contest__form {
-  display: flex;
-  flex-direction: column;
-}
-
 .contest__information {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0 22px;
+  padding-top: 40px;
 
   font-size: 18px;
   color: $ebony-clay;
 
   border: none;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 39px;
+  }
+
+  input[type="radio"] + label::before {
+    content: "";
+
+    display: block;
+    width: 37px;
+    height: 37px;
+    margin-right: 31px;
+
+    background-color: $white;
+    border: solid 2px $mercury;
+    border-radius: 50%;
+  }
+
+  input[type="radio"] + label::after {
+    content: "";
+    position: absolute;
+    left: 11px;
+
+    display: none;
+    width: 15px;
+    height: 15px;
+
+    background-color: $cerise-red;
+    border-radius: 50%;
+  }
+
+  input[type="radio"]:not(:checked) + label:hover::before {
+    border-color: $ebony-clay;
+  }
+
+  input[type="radio"]:not(:checked) + label:active::before {
+    border-color: $cerise-red;
+  }
+
+  input[type="radio"]:not(:checked) + label:active::after {
+    display: block;
+  }
+
+  input[type="radio"]:checked + label::after {
+    display: block;
+  }
+
+  input[type="checkbox"]:not(:checked) ~ .contest__checkbox-check {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ .contest__checkbox-check {
+    display: block;
+  }
+
+  input[type="checkbox"] ~ .contest__checkbox-check {
+    position: absolute;
+    left: 6px;
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: "";
+
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-right: 32px;
+
+    background-color: $white;
+    border: solid 2px $mercury;
+    border-radius: 3px;
+  }
+
+  input[type="checkbox"] + label:hover::before {
+    border-color: $ebony-clay;
+  }
+
+  input[type="checkbox"] + label:active::before {
+    border-color: $cerise-red;
+  }
 
   &--contact-user legend {
     display: none;
@@ -51,6 +158,10 @@
 
   &--about-user,
   &--contact-user {
+    .contest__information-block {
+      margin-bottom: 10px;
+    }
+
     label {
       padding-left: 15px;
 
@@ -61,13 +172,27 @@
 
     input {
       width: 100%;
-      padding: 12px;
+      padding-top: 14px;
+      padding-right: 18px;
+      padding-bottom: 12px;
+      padding-left: 20px;
 
       font-size: 18px;
       line-height: 30px;
       color: $ebony-clay;
 
       border: solid 2px $mercury;
+      border-radius: 3px;
+    }
+
+    input:hover {
+      border-color: $ebony-clay;
+    }
+
+    input:active,
+    input:focus {
+      border-color: $cerise-red;
+      outline: none;
     }
 
     input::placeholder {
@@ -85,7 +210,21 @@
   flex-direction: column;
 }
 
+.contest__information-achievements-list {
+  @include List-reset;
+}
+
+.contest__information-achievements-list li {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 47px;
+}
+
 .contest__information legend {
+  padding-top: 120px;
+
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -95,6 +234,9 @@
 
 .contest__information textarea {
   width: 100%;
+  min-height: 197px;
+  padding-top: 20px;
+  padding-left: 19px;
 
   font-size: 18px;
   line-height: 30px;
@@ -116,12 +258,23 @@
   text-transform: uppercase;
 }
 
+.contest__submit-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
+}
+
 .contest__legend sup {
   color: $cerise-red;
 }
 
 .contest__button-submit {
   width: 280px;
+  margin: 0 auto;
+  margin-top: 52px;
+  margin-bottom: 45px;
   padding-top: 12px;
   padding-bottom: 14px;
 
@@ -142,6 +295,11 @@
     font-size: 50px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 2400px auto;
+    }
   }
 
   .contest__slogan {
@@ -151,6 +309,9 @@
   }
 
   .contest__information:not(:first-of-type) {
+    margin-right: 22px;
+    margin-left: 22px;
+
     border: solid 2px $mercury;
   }
 
@@ -159,6 +320,8 @@
   }
 
   .contest__information {
+    margin-bottom: 60px;
+
     &--contact-user legend {
       display: block;
     }
@@ -177,19 +340,71 @@
 
     &--contact-user {
       .contest__information-block {
+        position: relative;
+
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 40px;
       }
 
-      .contest__information-block:last-of-type {
-        margin-bottom: 0;
+      .contest__information-block::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: block;
+        width: 60px;
+        height: 60px;
+
+        background-color: $mercury;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: solid 2px $mercury;
+        border-left: none;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+
+      .contest__user-tel::after {
+        background-image: url("../img/icon-phone.svg");
+        background-size: 20px 19px;
+      }
+
+      .contest__user-email::after {
+        background-image: url("../img/icon-mail.svg");
+        background-size: 18px 13px;
       }
     }
   }
 
+  .contest__information legend {
+    padding-top: 0;
+  }
+
   .contest__legend {
     line-height: 30px;
+  }
+
+  .contest__information textarea {
+    width: 496px;
+    min-height: 189px;
+    margin: 0 auto;
+    margin-bottom: 53px;
+  }
+
+  .contest__submit-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .contest__button-submit {
+    margin: 0;
   }
 }
 
@@ -228,6 +443,11 @@
     font-size: 50px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .contest__slogan {

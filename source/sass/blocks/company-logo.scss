@@ -1,0 +1,111 @@
+.company-logo:hover {
+  .company-logo__letter {
+    fill: $cerise-red;
+  }
+
+  .company-logo__glasses-part {
+    fill: $cerise-red;
+  }
+
+  .company-logo__particle {
+    fill: $cerise-red;
+  }
+}
+
+.company-logo {
+  &--header {
+    .company-logo__image--glasses {
+      display: none;
+    }
+  }
+
+  &--header:active {
+    svg {
+      opacity: 0.3;
+    }
+
+    .company-logo__letter {
+      fill: $white;
+    }
+
+    .company-logo__glasses-part {
+      fill: $white;
+    }
+  }
+
+  &--footer:active {
+    svg {
+      opacity: 0.3;
+    }
+
+    .company-logo__letter {
+      fill: $ebony-clay;
+    }
+
+    .company-logo__particle {
+      fill: $ebony-clay;
+    }
+  }
+}
+
+.company-logo__image {
+  &--text {
+    display: block;
+  }
+
+  &--index {
+    display: none;
+  }
+
+  &--full {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .company-logo {
+    &--header {
+      .company-logo__image--glasses {
+        display: block;
+      }
+    }
+  }
+
+  .company-logo__image {
+    &--text {
+      display: none;
+    }
+
+    &--glasses {
+      display: block;
+    }
+
+    &--full {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .company-logo {
+    &--header {
+      .company-logo__image--glasses {
+        display: none;
+      }
+    }
+  }
+
+  .company-logo__image {
+    &--text {
+      display: none;
+    }
+
+    &--glasses {
+      display: none;
+    }
+
+    &--full {
+      display: block;
+    }
+  }
+}

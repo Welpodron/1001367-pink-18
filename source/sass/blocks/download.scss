@@ -9,6 +9,16 @@
 
 .download__button {
   width: 280px;
+
+  &:hover {
+    color: $cerise-red;
+
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -56,15 +56,28 @@
   width: 50px;
   height: 50px;
   margin-right: 40px;
+  padding: 0;
 
   font-size: 0;
 
+  background: transparent;
+  border: none;
   opacity: 0.3;
+
+  fill: $ebony-clay;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   &--active {
     opacity: 1;
 
     fill: $cerise-red;
+  }
+
+  &--active:hover {
+    opacity: 1;
   }
 
   &--crop {
@@ -89,34 +102,51 @@
   }
 }
 
-.upload__slider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
+.upload__scale {
   display: none;
   width: 240px;
+}
+
+.upload__filter--active + .upload__scale {
+  position: absolute;
+  bottom: 0;
+  left: 19px;
+
+  display: block;
+}
+
+.upload__bar {
   height: 2px;
 
-  background: $ebony-clay;
-  transform: translateX(18px);
+  background-color: #131111;
+}
 
-  &::-webkit-slider-thumb {
-    width: 13px;
-    height: 13px;
+.upload__toggle {
+  position: absolute;
+  bottom: -6px;
 
-    background: $concrete;
-    border: solid 2px $cerise-red;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+  width: 15px;
+  height: 15px;
+
+  background-color: $concrete;
+  border: solid 2px $cerise-red;
+  border-radius: 50%;
+  cursor: pointer;
 
   &--active {
-    display: block;
+    background-color: $cerise-red;
   }
 
-  &--active::-webkit-slider-thumb {
-    background: $cerise-red;
+  &--crop {
+    left: 75%;
+  }
+
+  &--fill {
+    left: 15%;
+  }
+
+  &--contrast {
+    left: 45%;
   }
 }
 
@@ -216,6 +246,18 @@
 
     opacity: 1;
 
+    &:hover {
+      svg {
+        fill: $ebony-clay;
+      }
+    }
+
+    &--active:hover {
+      svg {
+        fill: $cerise-red;
+      }
+    }
+
     svg {
       fill: $cerise-red;
     }
@@ -244,13 +286,30 @@
         fill: $cerise-red;
       }
     }
+
+    &--contrast:hover {
+      path {
+        fill: $ebony-clay;
+      }
+    }
   }
 
-  .upload__slider {
+  .upload__scale {
     position: relative;
 
     display: block;
     width: 202px;
+  }
+
+  .upload__filter--active ~ .upload__scale {
+    position: relative;
+    left: 0;
+  }
+
+  .upload__toggle {
+    &--active {
+      background-color: $concrete;
+    }
   }
 
   .upload__form .button {
@@ -313,8 +372,22 @@
     }
   }
 
-  .upload__slider {
+  .upload__scale {
     width: 288px;
+  }
+
+  .upload__toggle {
+    &--crop {
+      left: 25%;
+    }
+
+    &--fill {
+      left: 85%;
+    }
+
+    &--contrast {
+      left: 55%;
+    }
   }
 
   .upload__form .button {

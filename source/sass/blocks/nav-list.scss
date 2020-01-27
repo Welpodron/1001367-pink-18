@@ -15,6 +15,14 @@
   line-height: 32px;
   color: $white;
   text-transform: uppercase;
+
+  &:hover {
+    color: $cerise-red;
+  }
+
+  &:active {
+    color: rgba($color: #d22856, $alpha: 0.3);
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -32,5 +40,9 @@
   .nav-list__item a {
     font-weight: 400;
     text-transform: none;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }

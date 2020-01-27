@@ -80,12 +80,15 @@
   .reviews__slider-button {
     position: absolute;
     top: 50%;
+
     display: block;
     width: 22px;
     height: 41px;
     margin: 0;
     padding: 0;
+
     font-size: 0;
+
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
