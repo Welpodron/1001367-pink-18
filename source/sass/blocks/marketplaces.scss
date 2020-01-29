@@ -7,8 +7,8 @@
 
 .marketplaces__list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: flex-end;
   width: 205px;
 
@@ -53,8 +53,9 @@
 .marketplaces__availability {
   display: block;
   width: 280px;
-  margin-bottom: 29px;
   margin-top: 26px;
+  margin-bottom: 29px;
+
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
@@ -67,14 +68,16 @@
 
   .marketplaces__availability {
     width: 300px;
-    font-size: 18px;
     margin-top: 40px;
+
+    font-size: 18px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .marketplaces__availability {
-    font-size: 18px;
     margin-top: 56px;
+
+    font-size: 18px;
   }
 }

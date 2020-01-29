@@ -3,9 +3,9 @@
 }
 
 .contest__form {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-width: 280px;
   max-width: 1200px;
   margin: 0 auto;
@@ -13,6 +13,7 @@
 
 .contest__form-info {
   display: none;
+
   font-size: 14px;
   line-height: 30px;
   color: $ebony-clay;
@@ -22,20 +23,21 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding-left: 30px;
+  padding-top: 28px;
   padding-right: 30px;
   padding-bottom: 43px;
+  padding-left: 30px;
+
   font-weight: 300;
   font-size: 24px;
-  padding-top: 28px;
   line-height: normal;
   color: $white;
 
   background-color: #112030;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 320px auto;
   background-position: center top;
+  background-size: 320px auto;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -55,30 +57,16 @@
   background-color: $white;
 }
 
-.contest__information--text {
-  order: 5;
-}
-
-.contest__information--about-user {
-  order: 1;
-}
-
-.contest__information--contact-user {
-  order: 3;
-}
-
-.contest__submit-block {
-  order: 6;
-}
-
 .contest__information legend {
-  padding-left: 12px;
   padding-right: 12px;
+  padding-left: 12px;
+
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   color: $cerise-red;
   text-transform: uppercase;
+
   transform: translateY(55px);
 }
 
@@ -104,14 +92,17 @@
   }
 
   &--about-user {
+    order: 1;
     padding-top: 35px;
   }
 
   &--contact-user {
+    order: 3;
     padding-top: 20px;
   }
 
   &--text {
+    order: 5;
     width: 100%;
     padding-top: 44px;
 
@@ -228,6 +219,7 @@
 
     label {
       padding-left: 20px;
+
       font-size: 14px;
       color: $cerise-red;
       text-transform: uppercase;
@@ -330,6 +322,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  order: 6;
   width: 280px;
   margin: 0 auto;
   padding-bottom: 17px;
@@ -346,16 +339,22 @@
   margin-bottom: 40px;
   padding-top: 12px;
   padding-bottom: 14px;
-  cursor: pointer;
+
   font-weight: 800;
   font-size: 18px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: $white;
   text-transform: uppercase;
+
+  background-color: #2aab6d;
+  border: solid 2px #2aab6d;
+  border-radius: 3px;
+  cursor: pointer;
+
   &:hover {
-    border: solid 2px #1c9b5e;
     background-color: #1c9b5e;
+    border: solid 2px #1c9b5e;
   }
 
   &:active {
@@ -363,20 +362,19 @@
   }
 
   &:disabled {
-    cursor: default;
-    border: solid 2px #e5e5e5;
     background-color: #e5e5e5;
+    border: solid 2px #e5e5e5;
+    cursor: default;
   }
-  background-color: #2aab6d;
-  border: solid 2px #2aab6d;
-  border-radius: 3px;
 }
 
 @media (min-width: $tablet-width) {
   .contest__title {
-    font-size: 50px;
-    padding-bottom: 66px;
     padding-top: 59px;
+    padding-bottom: 66px;
+
+    font-size: 50px;
+
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 1200px auto;
 
@@ -389,6 +387,7 @@
     width: 500px;
     padding-top: 93px;
     padding-bottom: 0;
+
     font-size: 18px;
   }
 
@@ -397,12 +396,13 @@
   }
 
   .contest__form-info {
-    font-size: 18px;
     display: block;
     margin: 0;
+
+    font-size: 18px;
   }
 
-  .contest__form .contest__information{
+  .contest__form .contest__information {
     order: unset;
   }
 
@@ -423,31 +423,33 @@
   }
 
   .contest__information {
-    margin-bottom: 60px;
     width: 100%;
-    padding: 0;
     margin: 0;
-    padding-left: 57px;
-    padding-top: 42px;
-    padding-bottom: 16px;
-    padding-right: 57px;
     margin-bottom: 55px;
+    padding: 0;
+    padding-top: 42px;
+    padding-right: 57px;
+    padding-bottom: 16px;
+    padding-left: 57px;
 
     &--contact-user legend {
       display: block;
     }
 
     legend {
-      padding-left: 25px;
+      padding-top: 0;
       padding-right: 25px;
+      padding-left: 25px;
+
+      transform: translateY(0);
     }
 
     &--about-user {
+      margin-bottom: 9px;
+      padding-top: 65px;
+      padding-right: 0;
       padding-bottom: 0;
       padding-left: 0;
-      padding-top: 65px;
-      margin-bottom: 9px;
-      padding-right: 0;
 
       .contest__information-block {
         display: flex;
@@ -468,6 +470,10 @@
 
     &--text {
       padding-bottom: 0;
+    }
+
+    &--app {
+      order: 2;
     }
 
     &--contact-user {
@@ -517,11 +523,6 @@
     }
   }
 
-  .contest__information legend {
-    padding-top: 0;
-    transform: translateY(0);
-}
-
   .contest__legend {
     line-height: 30px;
   }
@@ -543,21 +544,21 @@
   }
 
   .contest__button-submit {
+    width: 296px;
     margin: 0;
     margin-top: 12px;
-    width: 296px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contest__form {
-    width: 960px;
-    padding-left: 10px;
-    padding-right: 10px;
     flex-direction: row;
-    padding-top: 72px;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 960px;
+    padding-top: 72px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .contest__information {
@@ -577,7 +578,7 @@
     }
 
     &--text {
-      padding-bottom: 0px;
+      padding-bottom: 0;
     }
 
     &--app {
@@ -589,15 +590,15 @@
       }
 
       legend {
-        padding-left: 20px;
         padding-right: 20px;
+        padding-left: 20px;
       }
     }
   }
 
   .contest__information:not(:first-of-type) {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 
   .contest__information:not(:nth-of-type(2)) {
@@ -620,7 +621,7 @@
     justify-content: space-between;
   }
 
-  .contest__information-achievements-list li{
+  .contest__information-achievements-list li {
     max-width: 260px;
     margin-right: 0;
   }
@@ -666,13 +667,16 @@
   }
 
   .contest__title {
-    font-size: 50px;
     padding-top: 178px;
+    padding-right: 70px;
     padding-bottom: 80px;
     padding-left: 70px;
-    padding-right: 70px;
+
+    font-size: 50px;
+
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px auto;
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
@@ -687,6 +691,7 @@
   .contest__slogan {
     width: 756px;
     padding-top: 93px;
+
     font-size: 18px;
   }
 
@@ -699,7 +704,7 @@
   }
 
   .contest__submit-block {
-    padding-bottom: 0;
     margin-bottom: 13px;
+    padding-bottom: 0;
   }
 }

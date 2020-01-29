@@ -20,10 +20,11 @@
 
   .research__image {
     position: relative;
-    padding-top: 6px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 6px;
   }
 
   .research__image svg {
@@ -35,6 +36,7 @@
     position: absolute;
     top: 59px;
     left: 18px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,18 +58,20 @@
   }
 
   .research__title {
-    font-size: 30px;
-    line-height: 36px;
     margin: 0;
     margin-top: 20px;
+
+    font-size: 30px;
+    line-height: 36px;
   }
 
   .research__description {
-    line-height: 24px;
-    color: $ebony-clay;
     margin: 0;
     margin-top: 10px;
     margin-bottom: 5px;
+
+    line-height: 24px;
+    color: $ebony-clay;
   }
 
   .research__link {
@@ -80,8 +84,9 @@
 
 @media (min-width: $desktop-width) {
   .research {
-    background-color: $concrete;
     margin-bottom: 70px;
+
+    background-color: $concrete;
   }
 
   .research__wrapper {
@@ -105,18 +110,21 @@
   }
 
   .research__image span {
-    left: 22px;
     top: 115px;
+    left: 22px;
+
     width: 253px;
     height: 253px;
+
     font-size: 120px;
     line-height: 187px;
-}
+  }
 
   .research__title {
     margin-top: 100px;
-    line-height: 30px;
     margin-bottom: 25px;
+
+    line-height: 30px;
   }
 
   .research__title br {
@@ -124,10 +132,11 @@
   }
 
   .research__description {
-    font-size: 18px;
-    line-height: 30px;
     margin-top: 20px;
     margin-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .research__link {

@@ -1,3 +1,7 @@
+.users-publications {
+  overflow: hidden;
+}
+
 .users-publications__header {
   text-align: center;
 }
@@ -17,12 +21,12 @@
   background-color: #112030;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 320px auto;
   background-position: center top;
+  background-size: 320px auto;
 
   @media (min-resolution: $retina-dppx) {
-    background-size: cover;
     background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: cover;
   }
 }
 
@@ -33,6 +37,7 @@
   padding: 0 15px;
   padding-top: 45px;
   padding-bottom: 49px;
+
   font-weight: 400;
   color: $ebony-clay;
 
@@ -40,10 +45,11 @@
 }
 
 .users-publications__list {
-  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 320px;
+  overflow: hidden;
 
   @include List-reset;
   margin: 0 auto;
@@ -95,11 +101,12 @@
     flex-direction: column;
     width: 280px;
     margin: 0;
-    padding-left: 17px;
-    padding-right: 0px;
     padding-top: 19px;
-    background-color: $concrete;
+    padding-right: 0;
     padding-bottom: 26px;
+    padding-left: 17px;
+
+    background-color: $concrete;
   }
 
   .users-publications__text {
@@ -131,13 +138,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
   justify-self: flex-end;
 }
 
 .users-publications__likes {
   order: 2;
-  line-height: 1;
+
   font-size: 12px;
+  line-height: 1;
   color: $cerise-red;
   text-transform: uppercase;
 }
@@ -156,18 +165,21 @@
   background-color: transparent;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+  background-position: center 0;
+  background-size: 13px 12px;
   border: none;
 }
 
 @media (min-width: $tablet-width) {
   .users-publications__title {
-    font-size: 50px;
     padding-top: 60px;
     padding-bottom: 133px;
+
+    font-size: 50px;
+
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 1200px auto;
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
@@ -176,17 +188,21 @@
   .users-publications__slogan {
     width: 440px;
     padding-top: 92px;
-    padding-left: 0;
     padding-right: 0;
     padding-bottom: 76px;
+    padding-left: 0;
+
     font-size: 18px;
   }
 
   .users-publications__list {
-    width: 660px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 660px;
+
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .users-publications__item:first-of-type {
@@ -199,19 +215,28 @@
   }
 
   .users-publications__item:not(:first-of-type) {
+    justify-content: space-between;
     min-height: 455px;
+
     background-color: $concrete;
 
     .users-publications__text {
       margin-bottom: 0;
+
+      display: block;
+      min-height: 48px;
     }
 
     .users-publications__likes-block {
-      margin-top: auto;
+      margin-top: 20px;
     }
 
     .users-publications__author-block {
       margin-top: 23px;
+    }
+
+    .users-publications__like-button {
+      margin-left: auto;
     }
   }
 
@@ -231,11 +256,11 @@
 
   .users-publications__item blockquote {
     width: 100%;
-    padding-left: 28px;
-    padding-right: 28px;
-    padding-top: 0;
-    padding-bottom: 27px;
     min-height: 155px;
+    padding-top: 0;
+    padding-right: 28px;
+    padding-bottom: 27px;
+    padding-left: 28px;
   }
 
   .users-publications__item:first-of-type blockquote {
@@ -265,10 +290,6 @@
     margin-right: 17px;
   }
 
-  .users-publications__item:not(:first-of-type) .users-publications__likes-block {
-    justify-content: space-between;
-  }
-
   .users-publications__likes {
     order: 1;
   }
@@ -281,12 +302,14 @@
 
 @media (min-width: $desktop-width) {
   .users-publications__title {
+    padding-bottom: 110px;
+
     font-size: 50px;
     line-height: 53px;
-    padding-bottom: 110px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
 
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px auto;
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
@@ -295,6 +318,7 @@
   .users-publications__slogan {
     width: 580px;
     padding-bottom: 87px;
+
     font-size: 18px;
   }
 
@@ -304,6 +328,8 @@
     justify-content: center;
     min-width: 960px;
     max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .users-publications__item:not(.users-publications__item--hot) {

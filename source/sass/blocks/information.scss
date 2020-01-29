@@ -4,26 +4,27 @@
   align-items: center;
   padding-top: 40px;
   overflow: hidden;
+
   background-color: $concrete;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
-
 }
 
 .information__header {
-  text-align: center;
   margin-bottom: 32px;
+
+  text-align: center;
 }
 
 .information__slogan {
-  padding-top: 40px;
-
-  min-width: 210px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 210px;
+  padding-top: 40px;
+
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
@@ -39,24 +40,27 @@
 }
 
 .information__item {
-  width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 280px;
+
   text-align: center;
 }
 
 .information__title {
   display: block;
   width: 280px;
+  margin-bottom: 0;
+
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 0;
 }
 
 .information__description {
   display: block;
   width: 280px;
+
   line-height: 24px;
   color: $ebony-clay;
 }
@@ -67,6 +71,7 @@
 
 .information__item:last-of-type .information__item-image {
   display: block;
+
   transform: translateY(13%);
 }
 
@@ -76,9 +81,10 @@
   }
 
   .information__slogan {
-    line-height: 47px;
-    font-size: 40px;
     padding-top: 50px;
+
+    font-size: 40px;
+    line-height: 47px;
   }
 
   .information__slogan br:first-of-type {
@@ -91,14 +97,15 @@
 
   .information__item {
     align-items: flex-start;
-    margin-left: 310px;
     width: 310px;
+    margin-left: 310px;
+
     text-align: left;
   }
 
   .information__title {
-    width: 310px;
     display: block;
+    width: 310px;
     margin: 0;
     margin-top: 35px;
     margin-bottom: 10px;
@@ -106,74 +113,82 @@
 
   .information__description {
     display: block;
-    margin: 0;
     width: 310px;
+    margin: 0;
   }
 
   .information__item:last-of-type .information__item-image {
     position: absolute;
     bottom: 0;
     left: 0;
+
     transform: translateY(0%);
-}
+  }
 }
 
 @media (min-width: $desktop-width) {
   .information__slogan {
-    font-size: 50px;
-    line-height: 60px;
     padding-top: 67px;
     padding-bottom: 22px;
+
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .information__item {
     align-items: center;
     width: 300px;
-    padding-left: 0;
-    text-align: center;
     margin-left: 0;
+    padding-left: 0;
+
+    text-align: center;
   }
 
-  .information__item h3, .information__item p {
-    width: 300px;
+  .information__item h3,
+  .information__item p {
     display: block;
+    width: 300px;
   }
 
   .information__list {
-    padding-bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 0;
   }
 
   .information__title {
     order: 2;
     margin: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+
     font-size: 30px;
     line-height: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
   }
 
   .information__description {
     order: 3;
     margin: 0;
+    margin-top: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+
     font-size: 18px;
     line-height: 30px;
-    margin-top: 24px;
-    padding-left: 30px;
-    padding-right: 30px;
   }
 
   .information__item-image {
-    margin-bottom: 20px;
     display: block;
-    transform: translateY(-36px);
     order: 1;
-}
+    margin-bottom: 20px;
+
+    transform: translateY(-36px);
+  }
 
   .information__item:last-of-type .information__item-image {
     position: inherit;
+
     transform: translateY(-36px);
-}
+  }
 }

@@ -1,13 +1,11 @@
-#TEST {
-  display: none;
-}
-
 .upload {
   width: 100%;
+  overflow: hidden;
 }
 
 .upload__wrapper {
   width: 100%;
+  overflow: hidden;
   background-color: $concrete;
 }
 
@@ -41,37 +39,37 @@
 }
 
 .upload__form {
-  margin: 0 auto;
-  width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .upload__filter-wrapper {
-  padding-top: 20px;
   position: relative;
-  flex-wrap: wrap;
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
   margin-bottom: 2px;
+  padding-top: 20px;
 }
 
 .upload__container {
   position: relative;
-  align-items: center;
+
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 240px;
   margin: 0 auto;
-  justify-content: space-between;
   margin-bottom: 40px;
-  padding-bottom: 80px;
   padding-top: 20px;
-  border-bottom: solid 1px $mercury;
-}
+  padding-bottom: 80px;
 
-.upload__filter-block {
+  border-bottom: solid 1px $mercury;
 }
 
 .upload__filter {
@@ -130,6 +128,7 @@
 .upload__filter--active + .upload__scale {
   position: absolute;
   bottom: 35px;
+
   display: block;
 }
 
@@ -169,11 +168,14 @@
 }
 
 .upload__button-submit {
-  color: $cerise-red;
   width: 280px;
-  border-color: $cerise-red;
   margin: 0 auto;
   margin-bottom: 12px;
+
+  color: $cerise-red;
+
+  border-color: $cerise-red;
+
   &:hover {
     color: $white;
 
@@ -189,9 +191,11 @@
 
 .upload__button-reset {
   width: 280px;
-  color: rgba(40, 54, 69, 0.1);
   margin: 0 auto;
   margin-bottom: 41px;
+
+  color: rgba(40, 54, 69, 0.1);
+
   border-color: rgba($color: #283645, $alpha: 0.1);
 
   &:hover {
@@ -211,14 +215,16 @@
 @media (min-width: $tablet-width) {
   .upload__container {
     position: relative;
+
     display: flex;
-    width: 275px;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: none;
-    padding-bottom: 0;
+    width: 275px;
     margin-bottom: 0;
     padding-top: 0;
+    padding-bottom: 0;
+
+    border-bottom: none;
   }
 
   .upload__slogan {
@@ -226,6 +232,7 @@
     padding: 0;
     padding-top: 45px;
     padding-bottom: 69px;
+
     font-size: 18px;
   }
 
@@ -237,32 +244,34 @@
   }
 
   .upload__filter-wrapper {
-    width: 620px;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 0;
     justify-content: space-between;
+    width: 620px;
+    margin-bottom: 0;
     padding-top: 57px;
     padding-bottom: 44px;
   }
 
   .upload__image {
-    margin-right: 19px;
     width: 300px;
     height: 400px;
+    margin-right: 19px;
   }
 
   .upload__filter-block {
     position: relative;
+
     display: flex;
-    width: 275px;
     align-items: center;
+    width: 275px;
     margin-top: 0;
     margin-bottom: 17px;
-    padding-left: 8px;
-    padding-right: 13px;
     padding-top: 7px;
+    padding-right: 13px;
     padding-bottom: 24px;
+    padding-left: 8px;
+
     border-bottom: solid 1px $mercury;
   }
 
@@ -270,6 +279,7 @@
     width: 25px;
     height: 25px;
     margin-right: 29px;
+
     opacity: 1;
 
     &:hover {
@@ -329,9 +339,9 @@
 
   .upload__filter--active ~ .upload__scale {
     position: relative;
-    left: 0;
     bottom: 0;
-}
+    left: 0;
+  }
 
   .upload__toggle {
     &--crop {
@@ -380,9 +390,9 @@
 @media (min-width: $desktop-width) {
   .upload {
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     margin-bottom: 40px;
   }
 
@@ -399,10 +409,10 @@
   }
 
   .upload__container-wrapper {
-    margin-left: auto;
-    width: 410px;
     display: flex;
     flex-direction: column;
+    width: 410px;
+    margin-left: auto;
   }
 
   .upload__container {
@@ -411,16 +421,16 @@
   }
 
   .upload__button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: auto;
     margin-bottom: 10px;
     padding: 0;
     padding-left: 10px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
   }
 
-  .upload__button-container button{
+  .upload__button-container button {
     margin: 0;
   }
 
@@ -428,6 +438,7 @@
     width: 580px;
     padding-top: 2px;
     padding-bottom: 66px;
+
     font-size: 18px;
   }
 

@@ -1,13 +1,13 @@
 .intro {
-
   text-align: center;
   color: $white;
 
   background-color: $mirage;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center top;
+  background-size: contain;
+
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
     background-size: cover;
@@ -24,11 +24,11 @@
 }
 
 .intro__slogan {
-  padding-top: 22px;
-  display: block;
-  margin: 0 auto;
   display: block;
   width: 280px;
+  margin: 0 auto;
+  padding-top: 22px;
+
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
@@ -41,6 +41,7 @@
   width: 320px;
   height: 314px;
   margin: 0 auto;
+
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -54,8 +55,9 @@
 @media (min-width: $tablet-width) {
   .intro {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: 1200px auto;
     background-position: center bottom;
+    background-size: 1200px auto;
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
@@ -67,7 +69,7 @@
     align-items: flex-start;
     width: 620px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 90px;
   }
 
   .intro__wrapper {
@@ -93,16 +95,13 @@
     display: none;
   }
 
-  .intro .container {
-    padding-top: 90px;
-  }
-
   .intro__slogan {
-    line-height: 50px;
     padding-top: 0;
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
+
     font-size: 40px;
+    line-height: 50px;
   }
 }
 
@@ -111,8 +110,9 @@
     padding-top: 90px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-size: 2560px auto;
     background-position: center;
+    background-size: 2560px auto;
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
       background-size: cover;
@@ -143,7 +143,8 @@
 
   .intro__slogan {
     padding-top: 28px;
-    line-height: 60px;
+
     font-size: 50px;
+    line-height: 60px;
   }
 }
