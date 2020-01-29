@@ -44,4 +44,32 @@ body {
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
   }
+
+  .fix-menu {
+    padding-top: 95px;
+
+    &--index {
+      padding-top: 89px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    .fix-menu {
+      padding-top: 170px;
+
+      &--index {
+        padding-top: 111px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .fix-menu {
+      padding-top: 178px;
+
+      &--index {
+        padding-top: 28px;
+      }
+    }
+  }
 }

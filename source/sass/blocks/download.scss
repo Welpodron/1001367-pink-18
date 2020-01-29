@@ -9,6 +9,8 @@
 
 .download__button {
   width: 280px;
+  margin-top: 27px;
+  margin-bottom: 30px;
 
   &:hover {
     color: $cerise-red;
@@ -30,6 +32,7 @@
 
   .download__button {
     width: 300px;
+    margin-bottom: 45px;
   }
 }
 
@@ -42,5 +45,10 @@
 
   .download__button {
     width: 300px;
+    font-size: 21px;
+    line-height: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 67px;
   }
 }

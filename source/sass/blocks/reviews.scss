@@ -1,3 +1,7 @@
+.reviews {
+  margin-bottom: 37px;
+}
+
 .reviews__wrapper {
   display: flex;
   flex-direction: column;
@@ -6,15 +10,18 @@
 
 .reviews__list {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .reviews__item {
   display: none;
-
   text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
 
   &--active {
     display: flex;
+    width: 280px;
     flex-direction: column;
   }
 }
@@ -40,6 +47,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .reviews__item {
+    &--active {
+      width: 620px;
+    }
+  }
+
+  .reviews {
+    margin-bottom: 20px;
+  }
+
+  .reviews__list {
+    margin-bottom: 36px;
+  }
+
   .reviews__author-name {
     order: 2;
 
@@ -53,14 +74,45 @@
 
   .reviews__text {
     order: 1;
-
+    margin-bottom: 36px;
     font-size: 18px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .reviews {
+    margin-bottom: 0;
+  }
+
   .reviews__wrapper {
     padding: 0 10px;
+  }
+
+  .reviews__item {
+    &--active {
+      width: 940px;
+    }
+  }
+
+  .reviews__item {
+    margin-top: 31px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .reviews__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews__list::before {
+    display: block;
+    content: "";
+    width: 79px;
+    height: 65px;
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
   }
 
   .reviews__author-name {
@@ -79,7 +131,7 @@
 
   .reviews__slider-button {
     position: absolute;
-    top: 50%;
+    top: 47.4%;
 
     display: block;
     width: 22px;
@@ -92,7 +144,7 @@
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
-    transform: translateY(calc(-41px / 2));
+
     opacity: 0.3;
 
     &:hover {
@@ -104,13 +156,13 @@
     }
 
     &--prev {
-      left: 0;
+      left: -9px;
 
       background-image: url("../img/icon-review-arrow-left.svg");
     }
 
     &--next {
-      right: 0;
+      right: -9px;
 
       background-image: url("../img/icon-review-arrow-right.svg");
     }

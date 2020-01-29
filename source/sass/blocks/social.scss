@@ -1,17 +1,18 @@
 .social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 200px;
+  width: 177px;
 
   @include List-reset;
+  margin-bottom: 41px;
 }
 
 .social__link {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 47px;
+  height: 47px;
 
   font-size: 0;
 
@@ -42,5 +43,12 @@
   &--youtube {
     background-image: url("../img/icon-youtube.svg");
     background-size: 15px 14px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }

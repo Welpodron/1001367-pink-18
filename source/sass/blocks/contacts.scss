@@ -1,3 +1,8 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
 .contacts__wrapper::after {
   content: "";
   position: absolute;
@@ -9,13 +14,13 @@
 
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
+  background-position: center -32px;
 }
 
 .contacts__header {
   margin: 50px 0;
-
+  margin-top: 40px;
+  margin-bottom: 20px;
   text-align: center;
 
   background-color: $white;
@@ -48,6 +53,10 @@
   color: $cerise-red;
 }
 
+.contacts a:not(.contacts__address-link) {
+  margin-bottom: 20px;
+}
+
 .contacts span {
   display: block;
 
@@ -60,25 +69,84 @@
   font-style: normal;
 }
 
+.contacts__email:hover {
+  color: $ebony-clay;
+  border-bottom: solid 2px $ebony-clay;
+}
+
+.contacts__email:active {
+  color: rgba(40, 54, 69, 0.3);
+  border-bottom: none;
+
+  span {
+    color: $ebony-clay;
+  }
+}
+
+.contacts iframe {
+  max-height: 200px;
+}
+
 @media (min-width: $tablet-width) {
+  .contacts__wrapper::after {
+    background-size: cover;
+    background-position: center -55px;
+  }
+
+  .contacts__header {
+    margin-bottom: 35px;
+  }
+
   .contacts__information {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
+
+  .contacts a:not(.contacts__address-link) {
+    margin-bottom: 24px;
+  }
+
 
   .contacts__address {
     margin: 0 auto;
+    margin-top: 20px;
   }
 
   .contacts__slogan {
     font-size: 40px;
   }
+
+  .contacts iframe {
+    max-height: 370px;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .contacts__wrapper::after {
+    height: 123px;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+  .contacts__information {
+    padding-left: 50px;
+    padding-right: 30px;
+    justify-content: space-between;
+  }
+
+  .contacts__header {
+    margin-top: 63px;
+    margin-bottom: 56px;
+  }
+
   .contacts__slogan {
     font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contacts__description {
+    margin-bottom: 20px;
   }
 
   .contacts__address {
@@ -88,5 +156,9 @@
 
   .contacts__email {
     order: 3;
+  }
+
+  .contacts iframe {
+    max-height: 486px;
   }
 }

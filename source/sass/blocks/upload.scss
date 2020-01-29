@@ -1,4 +1,13 @@
+#TEST {
+  display: none;
+}
+
+.upload {
+  width: 100%;
+}
+
 .upload__wrapper {
+  width: 100%;
   background-color: $concrete;
 }
 
@@ -16,7 +25,9 @@
   display: block;
   width: 280px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 0 13px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
   font-weight: 400;
   text-align: center;
@@ -25,37 +36,46 @@
   background-color: $white;
 }
 
+.upload__image {
+  width: 100%;
+}
+
 .upload__form {
+  margin: 0 auto;
+  width: 280px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
 .upload__filter-wrapper {
+  padding-top: 20px;
   position: relative;
-
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 2px;
+}
+
+.upload__container {
+  position: relative;
+  align-items: center;
+  display: flex;
+  width: 240px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 80px;
+  padding-top: 20px;
+  border-bottom: solid 1px $mercury;
 }
 
 .upload__filter-block {
-  display: flex;
-  align-items: center;
-  width: 50px;
-  margin-top: 42px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
 }
 
 .upload__filter {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  margin-right: 40px;
   padding: 0;
 
   font-size: 0;
@@ -109,9 +129,7 @@
 
 .upload__filter--active + .upload__scale {
   position: absolute;
-  bottom: 0;
-  left: 19px;
-
+  bottom: 35px;
   display: block;
 }
 
@@ -138,7 +156,7 @@
   }
 
   &--crop {
-    left: 75%;
+    left: 80%;
   }
 
   &--fill {
@@ -150,17 +168,12 @@
   }
 }
 
-.upload__form .button {
-  width: 280px;
-  margin: 0 auto;
-  margin-bottom: 12px;
-}
-
 .upload__button-submit {
   color: $cerise-red;
-
+  width: 280px;
   border-color: $cerise-red;
-
+  margin: 0 auto;
+  margin-bottom: 12px;
   &:hover {
     color: $white;
 
@@ -175,8 +188,10 @@
 }
 
 .upload__button-reset {
+  width: 280px;
   color: rgba(40, 54, 69, 0.1);
-
+  margin: 0 auto;
+  margin-bottom: 41px;
   border-color: rgba($color: #283645, $alpha: 0.1);
 
   &:hover {
@@ -194,56 +209,67 @@
 }
 
 @media (min-width: $tablet-width) {
-  .upload__wrapper .container {
-    flex-direction: row;
+  .upload__container {
+    position: relative;
+    display: flex;
+    width: 275px;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 
   .upload__slogan {
     width: 440px;
-
+    padding: 0;
+    padding-top: 45px;
+    padding-bottom: 69px;
     font-size: 18px;
   }
 
   .upload__form {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 275px;
+    width: 100%;
   }
 
   .upload__filter-wrapper {
-    flex-direction: column;
+    width: 620px;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-bottom: 0;
+    justify-content: space-between;
+    padding-top: 57px;
+    padding-bottom: 44px;
+  }
+
+  .upload__image {
+    margin-right: 19px;
+    width: 300px;
+    height: 400px;
   }
 
   .upload__filter-block {
     position: relative;
-
-    width: 100%;
+    display: flex;
+    width: 275px;
+    align-items: center;
     margin-top: 0;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-
-      display: block;
-      width: 100%;
-      height: 1px;
-
-      background-color: $ebony-clay;
-      opacity: 0.1;
-    }
+    margin-bottom: 17px;
+    padding-left: 8px;
+    padding-right: 13px;
+    padding-top: 7px;
+    padding-bottom: 24px;
+    border-bottom: solid 1px $mercury;
   }
 
   .upload__filter {
     width: 25px;
     height: 25px;
-
+    margin-right: 29px;
     opacity: 1;
 
     &:hover {
@@ -304,44 +330,112 @@
   .upload__filter--active ~ .upload__scale {
     position: relative;
     left: 0;
-  }
+    bottom: 0;
+}
 
   .upload__toggle {
+    &--crop {
+      left: 72%;
+    }
+
+    &--fill {
+      left: 12%;
+    }
+
+    &--contrast {
+      left: 47%;
+    }
+
     &--active {
       background-color: $concrete;
     }
+
+    &:active {
+      background-color: $cerise-red;
+    }
   }
 
-  .upload__form .button {
+  .upload__container-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .upload__button-container {
+    margin-top: auto;
+  }
+
+  .upload__button-submit {
     width: 260px;
-    margin: 0 auto;
-    margin-bottom: 24px;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .upload__button-reset {
+    width: 260px;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .upload__wrapper .container {
+  .upload {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .upload__wrapper {
+    width: 940px;
+  }
+
+  .upload__form {
+    width: 800px;
+  }
+
+  .upload__filter-wrapper {
+    width: 100%;
+  }
+
+  .upload__container-wrapper {
+    margin-left: auto;
+    width: 410px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .upload__container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .upload__button-container {
+    margin-top: auto;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  }
+
+  .upload__button-container button{
+    margin: 0;
   }
 
   .upload__slogan {
     width: 580px;
-
+    padding-top: 2px;
+    padding-bottom: 66px;
     font-size: 18px;
   }
 
-  .upload__form {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 410px;
-  }
 
   .upload__filter-block {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-top: 0;
     padding-bottom: 10px;
   }
 

@@ -1,6 +1,7 @@
 .nav-list__item {
-  padding: 20px 0;
-
+  padding-top: 16px;
+  padding-bottom: 15px;
+  margin-top: 1px;
   text-align: center;
 
   background-color: $ebony-clay;
@@ -25,10 +26,22 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .nav-list__item {
+    padding-top: 18px;
+    padding-bottom: 15px;
+  }
+}
+
 @media (min-width: $desktop-width) {
+  .nav-list {
+    padding-top: 10px;
+  }
+
   .nav-list__item {
     background-color: transparent;
     box-shadow: none;
+    padding: 0;
 
     &--active {
       a {

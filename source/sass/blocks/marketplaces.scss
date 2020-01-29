@@ -7,10 +7,10 @@
 
 .marketplaces__list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
-  width: 100%;
-  margin: 25px 0;
+  width: 205px;
 
   @include List-reset;
 }
@@ -51,6 +51,10 @@
 }
 
 .marketplaces__availability {
+  display: block;
+  width: 280px;
+  margin-bottom: 29px;
+  margin-top: 26px;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
@@ -62,12 +66,15 @@
   }
 
   .marketplaces__availability {
+    width: 300px;
     font-size: 18px;
+    margin-top: 40px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .marketplaces__availability {
     font-size: 18px;
+    margin-top: 56px;
   }
 }

@@ -1,5 +1,6 @@
 .research {
   display: none;
+  margin-bottom: 40px;
 }
 
 @media (min-width: $tablet-width) {
@@ -14,11 +15,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 52px 0;
+    padding-bottom: 0;
   }
 
   .research__image {
     position: relative;
-
+    padding-top: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,8 +33,8 @@
 
   .research__image span {
     position: absolute;
-    top: 55px;
-
+    top: 59px;
+    left: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,11 +58,16 @@
   .research__title {
     font-size: 30px;
     line-height: 36px;
+    margin: 0;
+    margin-top: 20px;
   }
 
   .research__description {
     line-height: 24px;
     color: $ebony-clay;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
 
   .research__link {
@@ -74,15 +81,22 @@
 @media (min-width: $desktop-width) {
   .research {
     background-color: $concrete;
+    margin-bottom: 70px;
   }
 
   .research__wrapper {
+    justify-content: flex-start;
     padding-top: 17px;
     padding-bottom: 67px;
   }
 
   .research__header {
     width: 525px;
+    margin-left: 67px;
+  }
+
+  .research__image {
+    padding-top: 50px;
   }
 
   .research__image svg {
@@ -91,22 +105,29 @@
   }
 
   .research__image span {
-    top: 70px;
-
+    left: 22px;
+    top: 115px;
     width: 253px;
     height: 253px;
-
     font-size: 120px;
     line-height: 187px;
-  }
+}
 
   .research__title {
+    margin-top: 100px;
     line-height: 30px;
+    margin-bottom: 25px;
+  }
+
+  .research__title br {
+    display: none;
   }
 
   .research__description {
     font-size: 18px;
     line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   .research__link {

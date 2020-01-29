@@ -1,9 +1,3 @@
-.user-publications__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .users-publications__header {
   text-align: center;
 }
@@ -12,7 +6,8 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding-top: 28px;
+  padding-bottom: 76px;
 
   font-weight: 300;
   font-size: 24px;
@@ -22,10 +17,11 @@
   background-color: #112030;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-size: 320px auto;
+  background-position: center top;
 
   @media (min-resolution: $retina-dppx) {
+    background-size: cover;
     background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 }
@@ -34,8 +30,9 @@
   display: block;
   width: 280px;
   margin: 0 auto;
-  padding: 100px 0;
-
+  padding: 0 15px;
+  padding-top: 45px;
+  padding-bottom: 49px;
   font-weight: 400;
   color: $ebony-clay;
 
@@ -43,11 +40,13 @@
 }
 
 .users-publications__list {
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include List-reset;
+  margin: 0 auto;
 }
 
 .users-publications__item {
@@ -96,9 +95,16 @@
     flex-direction: column;
     width: 280px;
     margin: 0;
-    padding: 14px 17px;
-
+    padding-left: 17px;
+    padding-right: 0px;
+    padding-top: 19px;
     background-color: $concrete;
+    padding-bottom: 26px;
+  }
+
+  .users-publications__text {
+    margin: 0;
+    margin-bottom: 14px;
   }
 }
 
@@ -125,14 +131,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: auto;
-
   justify-self: flex-end;
 }
 
 .users-publications__likes {
   order: 2;
-
+  line-height: 1;
   font-size: 12px;
   color: $cerise-red;
   text-transform: uppercase;
@@ -160,30 +164,55 @@
 @media (min-width: $tablet-width) {
   .users-publications__title {
     font-size: 50px;
-
+    padding-top: 60px;
+    padding-bottom: 133px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-
+    background-size: 1200px auto;
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-size: 2400px auto;
     }
   }
 
   .users-publications__slogan {
     width: 440px;
-
+    padding-top: 92px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 76px;
     font-size: 18px;
   }
 
   .users-publications__list {
+    width: 660px;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .users-publications__item:first-of-type {
     width: 100%;
     margin-bottom: 50px;
+
+    .users-publications__image {
+      height: 509px;
+    }
+  }
+
+  .users-publications__item:not(:first-of-type) {
+    min-height: 455px;
+    background-color: $concrete;
+
+    .users-publications__text {
+      margin-bottom: 0;
+    }
+
+    .users-publications__likes-block {
+      margin-top: auto;
+    }
+
+    .users-publications__author-block {
+      margin-top: 23px;
+    }
   }
 
   .users-publications__item {
@@ -202,8 +231,11 @@
 
   .users-publications__item blockquote {
     width: 100%;
-    min-height: 190px;
-    padding: 30px 27px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 0;
+    padding-bottom: 27px;
+    min-height: 155px;
   }
 
   .users-publications__item:first-of-type blockquote {
@@ -211,6 +243,8 @@
     flex-wrap: wrap;
     width: 620px;
     min-height: auto;
+    padding-top: 25px;
+    padding-bottom: 9px;
   }
 
   .users-publications__item:first-of-type .users-publications__author-block {
@@ -248,18 +282,19 @@
 @media (min-width: $desktop-width) {
   .users-publications__title {
     font-size: 50px;
-
+    line-height: 53px;
+    padding-bottom: 110px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
 
+    background-size: 2560px auto;
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
-      background-size: cover;
     }
   }
 
   .users-publications__slogan {
     width: 580px;
-
+    padding-bottom: 87px;
     font-size: 18px;
   }
 
@@ -267,6 +302,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    min-width: 960px;
     max-width: 1200px;
   }
 
@@ -299,8 +335,8 @@
 
     &--hot {
       .users-publications__picture::before {
-        top: 10%;
-        right: 10%;
+        top: 11%;
+        right: 11%;
       }
     }
   }

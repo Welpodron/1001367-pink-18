@@ -8,7 +8,7 @@
   align-items: center;
   padding: 60px 0;
   overflow: hidden;
-
+  padding-bottom: 47px;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-position: center top;
@@ -18,8 +18,8 @@
 .plans__table {
   display: flex;
   flex-direction: column;
-  margin-top: 98px;
-  margin-bottom: 45px;
+  margin-top: 35px;
+  margin-bottom: 39px;
 }
 
 .plans__header {
@@ -50,8 +50,8 @@
 .plans__list th:not(.plans__legend) {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
-
+  padding-top: 17px;
+  padding-bottom: 16px;
   background-color: $ebony-clay;
 }
 
@@ -114,7 +114,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 19px;
+  padding: 15px 19px;
 
   color: $ebony-clay;
   text-transform: uppercase;
@@ -148,6 +148,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .plans__table {
+    margin-bottom: 20px;
+  }
+
+  .plans__wrapper {
+    padding-top: 54px;
+  }
+
   .plans__list th {
     width: 154px;
   }
@@ -168,6 +176,7 @@
 
   .plans__list th:not(.plans__legend) {
     padding: 10px 0;
+    padding-bottom: 5px;
   }
 
   .plans__list th:nth-of-type(2) {
@@ -182,7 +191,7 @@
 
   .plans__comparison-item td {
     width: 154px;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
 
     text-transform: none;
@@ -224,6 +233,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .plans__table {
+    margin-top: 101px;
+    margin-bottom: 49px;
+  }
+
   .plans__list th {
     width: 234px;
   }
@@ -243,7 +257,8 @@
   }
 
   .plans__list th:not(.plans__legend) {
-    padding: 10px 0;
+    padding-top: 15px;
+    padding-bottom: 19px;
   }
 
   .plans__list th:nth-of-type(2) {
@@ -258,8 +273,8 @@
 
   .plans__comparison-item td {
     width: 234px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 14px;
+    padding-bottom: 15px;
 
     font-size: 18px;
   }

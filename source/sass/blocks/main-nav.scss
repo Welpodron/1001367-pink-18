@@ -1,6 +1,17 @@
 .main-nav {
   display: flex;
   flex-direction: column;
+  margin-top: 26px;
+  border-top: solid 0.1px #000000;
+}
+
+.main-nav__wrapper {
+  &--opened {
+    display: block;
+  }
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -12,38 +23,99 @@
 }
 
 .main-nav__toggle {
+  display: none;
   position: absolute;
-  top: 0;
-  right: 0;
-
+  top: 20px;
+  right: 22px;
   width: 50px;
   height: 24px;
   padding: 0;
-
   font-size: 0;
-
   background-color: transparent;
-  background-image: url("../img/icon-menu-burger.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
   border: 0;
+
+  &--js{
+    display: block;
+  }
+
+  &:hover {
+    path {
+      fill: $cerise-red;
+    }
+  }
+
+  &:active {
+    path {
+      opacity: 0.3;
+    }
+  }
+
+  &--closed {
+    .main-nav__button-opened {
+      display: block;
+    }
+
+    .main-nav__button-closed {
+      display: none;
+    }
+  }
+
+  &--opened {
+    width: 24px;
+    height: 24px;
+
+    .main-nav__button-opened {
+      display: none;
+    }
+
+    .main-nav__button-closed {
+      display: block;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .main-nav {
+    margin-top: 40px;
+  }
+
   .main-nav__list {
     width: 100%;
+  }
+
+  .main-nav__toggle {
+    top: 44px;
+    right: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    margin-top: 0;
+    border: none;
+  }
+
   .main-nav__toggle {
     display: none;
+
+    &--js {
+      display: none;
+    }
+  }
+
+  .main-nav__wrapper {
+    &--opened {
+      display: block;
+    }
+    &--closed {
+      display: block;
+    }
   }
 
   .main-nav__list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 600px;
+    width: 630px;
   }
 }
